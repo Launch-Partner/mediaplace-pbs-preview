@@ -184,6 +184,7 @@ section{padding:74px 0}
 .cr-text p{font-size:1.02rem}
 .cr-media{border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border);box-shadow:0 20px 48px rgba(203,26,235,.16)}
 .cr-media img{width:100%;display:block}
+.cr-ph{aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;text-align:center;background:repeating-linear-gradient(135deg,#f3e3fb,#f3e3fb 14px,#efe0f7 14px,#efe0f7 28px);border:2px dashed var(--brand-light);color:var(--brand-deep);font-weight:700;font-size:.95rem;line-height:1.4;box-shadow:none}
 
 /* Credits "pays for itself" band */
 .credits{background:var(--grad);color:#fff;text-align:center}
@@ -195,6 +196,11 @@ section{padding:74px 0}
 .credit-stats .cs b{display:block;font-family:'Lexend';font-weight:900;font-size:clamp(2.4rem,5vw,3.2rem);line-height:1;color:#fff}
 .credit-stats .cs span{display:block;margin-top:8px;font-size:.94rem;color:rgba(255,255,255,.92);font-weight:600}
 @media(max-width:640px){.credit-stats .cs{min-width:0;flex:1 1 100%}}
+.credit-voucher{position:relative;display:inline-block;margin:34px auto 4px;background:#15101f;border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:26px 52px;box-shadow:0 18px 44px rgba(0,0,0,.4);overflow:hidden;text-align:center}
+.credit-voucher .cv-label{font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:#cbb9dd;font-weight:700}
+.credit-voucher .cv-amt{font-family:'Lexend';font-weight:900;font-size:clamp(2.4rem,6vw,3.4rem);color:#fff;line-height:1;margin-top:8px}
+.credit-voucher .cv-sub{color:rgba(255,255,255,.72);font-size:.9rem;margin-top:8px}
+.voucher-stamp{position:absolute;top:20px;right:-52px;transform:rotate(34deg);background:linear-gradient(135deg,#16a34a,#0e8a3e);color:#fff;font-weight:900;letter-spacing:.2em;font-size:.92rem;padding:7px 64px;box-shadow:0 6px 16px rgba(0,0,0,.35)}
 
 /* Guarantee (shield) */
 .guar-card{position:relative;overflow:hidden;display:grid;grid-template-columns:auto 1fr;gap:44px;align-items:center;max-width:1040px;margin:0 auto;background:linear-gradient(135deg,#fbeefb 0%,#fdeef6 100%);border:2px solid var(--brand-light);border-radius:var(--radius-lg);padding:clamp(36px,5vw,56px);box-shadow:0 24px 60px rgba(203,26,235,.12)}
@@ -347,7 +353,7 @@ footer{background:#100920;color:#9a8fae;padding:30px 0;text-align:center;font-si
       <div class="bs-ribbon"><span class="rib-full">Unlock your entire personal brand for one payment, no subscription</span><span class="rib-short">One payment, no subscription</span></div>
       <div class="boxshot-grid">
         <div class="boxshot-image">
-          <div class="bs-pic"><img src="assets/cat/social.webp" width="820" height="612" loading="lazy" decoding="async" alt="A full personal brand kit generated inside MediaPlace"></div>
+          <div class="bs-pic"><img src="assets/hero-showcase.webp" width="820" height="612" loading="lazy" decoding="async" alt="A full personal brand kit generated inside MediaPlace"></div>
           <ul class="bs-ticks">
             <li>Profile photos</li><li>Banners</li><li>Thumbnails</li>
             <li>Quote graphics</li><li>Business cards</li><li>Zoom backgrounds</li>
@@ -419,7 +425,7 @@ footer{background:#100920;color:#9a8fae;padding:30px 0;text-align:center;font-si
       <div class="gcard"><div class="gimg"><img src="assets/cat/cards.webp" width="820" height="612" loading="lazy" decoding="async" alt="Business card examples" onerror="this.replaceWith(document.createTextNode('📇'))"></div><div class="gbody"><h4>Business cards</h4><p>Print ready, matched to your brand</p></div></div>
       <div class="gcard"><div class="gimg"><img src="assets/cat/zoom.webp" width="820" height="612" loading="lazy" decoding="async" alt="Zoom background examples" onerror="this.replaceWith(document.createTextNode('🎥'))"></div><div class="gbody"><h4>Zoom backgrounds</h4><p>Look sharp on every video call</p></div></div>
       <div class="gcard"><div class="gimg"><img src="assets/cat/social.webp" width="820" height="612" loading="lazy" decoding="async" alt="Instagram content examples" onerror="this.replaceWith(document.createTextNode('📱'))"></div><div class="gbody"><h4>Instagram story and feed</h4><p>Cohesive post and story sets</p></div></div>
-      <div class="gcard"><div class="gimg"><img src="assets/cat/lifestyle.webp" width="820" height="612" loading="lazy" decoding="async" alt="Lifestyle photo examples" onerror="this.replaceWith(document.createTextNode('✨'))"></div><div class="gbody"><h4>Fun and lifestyle</h4><p>Candid "you doing things" shots</p></div></div>
+      <div class="gcard"><div class="gimg"><img src="assets/cat/fun.webp" width="820" height="612" loading="lazy" decoding="async" alt="Fun cartoon style examples" onerror="this.replaceWith(document.createTextNode('✨'))"></div><div class="gbody"><h4>Fun styles</h4><p>Plushies, action figures and comic-book versions of you</p></div></div>
       <div class="gcard"><div class="gimg"><img src="assets/cat/ads.webp" width="820" height="612" loading="lazy" decoding="async" alt="Ad creative examples" onerror="this.replaceWith(document.createTextNode('📣'))"></div><div class="gbody"><h4>Ad creatives</h4><p>Simple headshot ads that convert</p></div></div>
       <div class="gcard"><div class="gimg"><img src="assets/cat/thumbnails.webp" width="820" height="612" loading="lazy" decoding="async" alt="YouTube thumbnail examples" onerror="this.replaceWith(document.createTextNode('🎬'))"></div><div class="gbody"><h4>YouTube thumbnails</h4><p>Scroll stopping, with you in them</p></div></div>
     </div>
@@ -465,7 +471,7 @@ footer{background:#100920;color:#9a8fae;padding:30px 0;text-align:center;font-si
         <h3>Unlimited brand kits</h3>
         <p>Your $47 unlock is for life, with no cap on how many brand kits you build. Make one for yourself, one for your co-founder, and a fresh one for every client you take on.</p>
       </div>
-      <div class="cr-media"><img src="assets/cat/profile.webp" width="820" height="612" loading="lazy" decoding="async" alt="Build unlimited brand kits"></div>
+      <div class="cr-media cr-ph"><span>Product screenshot<br>coming soon</span></div>
     </div>
     <div class="crow flip">
       <div class="cr-text">
@@ -473,7 +479,7 @@ footer{background:#100920;color:#9a8fae;padding:30px 0;text-align:center;font-si
         <h3>Runs on the credits you already own</h3>
         <p>The Studio uses the same MediaPlace credits you have been buying for years, so the balance already sitting in your account works here. Generate unlimited assets from credits you already paid for.</p>
       </div>
-      <div class="cr-media"><img src="assets/cat/social.webp" width="820" height="612" loading="lazy" decoding="async" alt="Generate assets from your existing credits"></div>
+      <div class="cr-media cr-ph"><span>Product screenshot<br>coming soon</span></div>
     </div>
     <div class="crow">
       <div class="cr-text">
@@ -481,7 +487,7 @@ footer{background:#100920;color:#9a8fae;padding:30px 0;text-align:center;font-si
         <h3>Just paste a link</h3>
         <p>No good photo handy? Drop in your website, LinkedIn or X and the Studio pulls your image, your brand colors and your style automatically. It builds the whole thing around you with almost no effort.</p>
       </div>
-      <div class="cr-media"><img src="assets/cat/lifestyle.webp" width="820" height="612" loading="lazy" decoding="async" alt="Paste a link and the Studio builds around you"></div>
+      <div class="cr-media cr-ph"><span>Product screenshot<br>coming soon</span></div>
     </div>
   </div>
 </section>
@@ -492,6 +498,7 @@ footer{background:#100920;color:#9a8fae;padding:30px 0;text-align:center;font-si
     <span class="eyebrow">It pays for itself</span>
     <h2>You also get $47 of AI credits, on us</h2>
     <p>Unlock the Studio for $47 and we hand you $47 of AI credits straight back, free. That is enough to generate up to 250 personal branding assets, so your upgrade pays for itself the moment you start creating.</p>
+    <div><div class="credit-voucher"><span class="voucher-stamp">FREE</span><div class="cv-label">Included with your unlock</div><div class="cv-amt">$47 of AI credits</div><div class="cv-sub">~250 branded assets, on the house</div></div></div>
     <div class="credit-stats">
       <div class="cs"><b>$47</b><span>in free AI credits, included</span></div>
       <div class="cs"><b>~250</b><span>assets you can generate</span></div>
@@ -593,7 +600,7 @@ footer{background:#100920;color:#9a8fae;padding:30px 0;text-align:center;font-si
       <div class="bs-ribbon"><span class="rib-full">Unlock your entire personal brand for one payment, no subscription</span><span class="rib-short">One payment, no subscription</span></div>
       <div class="boxshot-grid">
         <div class="boxshot-image">
-          <div class="bs-pic"><img src="assets/cat/social.webp" width="820" height="612" loading="lazy" decoding="async" alt="A full personal brand kit generated inside MediaPlace"></div>
+          <div class="bs-pic"><img src="assets/hero-showcase.webp" width="820" height="612" loading="lazy" decoding="async" alt="A full personal brand kit generated inside MediaPlace"></div>
           <ul class="bs-ticks">
             <li>Profile photos</li><li>Banners</li><li>Thumbnails</li>
             <li>Quote graphics</li><li>Business cards</li><li>Zoom backgrounds</li>
