@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>One last thing: top up your AI credits | MediaPlace</title>
-<meta name="description" content="Skip the templates and just top up your Studio with 750 AI credits, around 250 more finished assets, for a one-time $47.">
+<title>One last thing: 750 AI credits | MediaPlace</title>
+<meta name="description" content="Get 750 AI credits to create around 250 more branded assets, for a one-time $47. Use them anywhere in MediaPlace, they never expire.">
 <meta name="theme-color" content="#bf0fc9">
 <link rel="icon" type="image/png" href="https://launch-partner.github.io/mediaplace-pbs-preview/assets/favicon.png">
 <link rel="apple-touch-icon" href="https://launch-partner.github.io/mediaplace-pbs-preview/assets/favicon.png">
@@ -224,11 +224,19 @@ footer{background:#100920;color:#9a8fae;padding:30px 0;text-align:center;font-si
   .guar-shield{width:130px;height:130px}.guar-shield svg{width:88px;height:88px}
 }
 @media(max-width:430px){.btn{white-space:normal;line-height:1.25}h1{font-size:1.8rem}}
+
+/* three points */
+.points{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1040px;margin:0 auto}
+.point{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px 26px;text-align:center;box-shadow:0 10px 30px rgba(191,15,201,.07)}
+.point .pico{font-size:2.1rem;line-height:1;margin-bottom:12px}
+.point h4{font-size:1.15rem;font-weight:800;color:var(--text);margin-bottom:8px}
+.point p{font-size:.95rem;color:var(--text-body)}
+@media(max-width:760px){.points{grid-template-columns:1fr;max-width:420px}}
 </style>
 </head>
 <body>
 
-<!-- 1. INTERRUPT (top of page, above header) -->
+<!-- 1. INTERRUPT -->
 <div class="interrupt"><h2>⚠️ Your order is not complete. Do not close this page. ⚠️</h2></div>
 
 <!-- 2. TOPBAR -->
@@ -237,131 +245,66 @@ footer{background:#100920;color:#9a8fae;padding:30px 0;text-align:center;font-si
   <div class="tb-mid"><span class="step-pill">Step 2 of 3</span><span class="cd">Expires in <strong id="cd">10:00</strong></span><a href="#" class="tb-cta">Add for $47</a></div>
 </div></header>
 
-<!-- 3. HERO -->
+<!-- 3. HERO + VSL -->
 <section class="hero"><div class="container">
   <span class="stop-pill">✋ One last thing</span>
-  <h1>No problem, skip the templates.<br><span class="grad-text">Grab 250 more branded assets.</span></h1>
-  <p class="hero-sub">Walk away with 250 more ready-to-post personal-brand assets for a one-time $47. They land as 750 AI credits, so you spend them however you like, across every brand kit, whenever you want.</p>
+  <h1>Get <span class="grad-text">750 AI credits</span><br>to create 250 more assets</h1>
+  <p class="hero-sub">You unlocked the Studio. Credits are what bring it to life. Add 750 more, enough for around 250 extra branded assets, for a one-time $47.</p>
   <div class="hero-cta">
     <a href="#" class="btn btn-lg">YES! Add to my order ($47) →</a>
-    <span class="guarline">30-day money-back guarantee</span>
   </div>
+  <div class="vsl"><span class="play"></span><span class="vlabel">Watch the 30 second walkthrough</span></div>
 </div></section>
 
-<!-- 4. OFFER BANNER (boxshot) -->
+<!-- 4. OFFER BANNER (below the fold) -->
 <section class="boxshot"><div class="container">
   <div class="boxshot-card reveal">
     <div class="bs-ribbon"><span class="rib-full">Add it to your order in one click, available on this page only</span><span class="rib-short">One click to add it</span></div>
     <div class="boxshot-grid">
       <div class="boxshot-image">
-        <div class="bs-pic"><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/lifestyle.jpeg" width="820" height="612" loading="lazy" decoding="async" alt="Generate more assets with AI credits"></div>
+        <div class="bs-pic"><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/lifestyle.jpeg" width="820" height="612" loading="lazy" decoding="async" alt="Create more assets with AI credits"></div>
         <ul class="bs-ticks">
-          <li>Photoshoot scenes</li><li>Business cards</li><li>Banners</li>
-          <li>Headshot ads</li><li>YouTube thumbs</li><li>Quote cards</li>
-          <li>Story templates</li><li>Call backgrounds</li><li>Mockups</li>
+          <li>Headshots</li><li>Banners</li><li>Thumbnails</li>
+          <li>Quote cards</li><li>Stories</li><li>Business cards</li>
+          <li>Mockups</li><li>Call backgrounds</li><li>Ad creatives</li>
         </ul>
       </div>
       <div class="boxshot-content">
         <div class="bs-name">250 More Assets</div>
         <div class="bs-val"><div class="l1">~250 ready-to-post branded assets</div><div class="l2">750 AI credits, yours to spend however you like</div></div>
         <div class="bs-deal">One time, on this page only:</div>
-        <div class="bs-price"><span class="bs-num">$47</span><span class="bs-tag">One payment<br>Yours to keep</span></div>
+        <div class="bs-price"><span class="bs-num">$47</span><span class="bs-tag">One payment<br>Never expires</span></div>
         <a href="#" class="btn btn-lg">YES! Add to my order ($47) →</a>
-        <div class="bs-trust">30-day money-back guarantee</div>
         <a href="#" class="decline">No thanks, I will pass on the credits</a>
       </div>
     </div>
   </div>
 </div></section>
 
-<!-- 5. CREDITS BAND -->
-<section class="credits"><div class="container tc">
-  <span class="eyebrow">More fuel</span>
-  <h2>250 more branded assets, ready to post</h2>
-  <p>Walk away with around 250 more finished personal-brand assets. They come as 750 AI credits, so you decide what to make and spend them however you like, across every brand kit.</p>
-  <div class="credit-stats">
-    <div class="cs"><b>~250</b><span>branded assets</span></div>
-    <div class="cs"><b>750</b><span>AI credits to spend</span></div>
-    <div class="cs"><b>$47</b><span>one time, yours to keep</span></div>
-  </div>
-</div></section>
-
-<!-- 6. WHY -->
-<section class="sec-warm"><div class="container">
-  <div class="head"><span class="eyebrow">Why top up now</span><h2>Never get stuck <span class="grad-text">mid-project</span></h2></div>
-  <div class="crow">
-    <div class="cr-text">
-      <h3>Keep creating without limits</h3>
-      <p>You unlocked the Studio. Credits are what turn it on. The more you have, the more of your brand you can finish today, not next month.</p>
-      <ul class="cr-list">
-        <li><span class="tk">✓</span>Use them across every brand kit you build, for you or for clients</li>
-        <li><span class="tk">✓</span>Never stall halfway through a batch waiting on more credits</li>
-        <li><span class="tk">✓</span>The same credits you already know, just 750 more of them</li>
-      </ul>
-    </div>
-    <div class="cr-media"><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/hero-showcase.jpeg" width="820" height="612" loading="lazy" decoding="async" alt="Finished personal-brand assets"></div>
-  </div>
-</div></section>
-
-<!-- 7. GUARANTEE -->
+<!-- 5. THREE POINTS -->
 <section><div class="container">
-  <div class="guar-card reveal">
-    <div class="guar-shield"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#bf0fc9"/><stop offset="1" stop-color="#eb1b9f"/></linearGradient></defs><path d="M50 5 L88 18 L88 50 Q88 78 50 95 Q12 78 12 50 L12 18 Z" fill="url(#sg)"/><path d="M30 50 L45 65 L72 38" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-    <div class="guar-body">
-      <span class="eyebrow">Risk free</span>
-      <h2>Try it risk-free for 30 days</h2>
-      <p>Add the credits, put them to work, and if you change your mind just email us any time in the next 30 days for a full refund. No questions, no hoops.</p>
-      <ul class="guar-checks"><li>Full 30-day money-back guarantee</li><li>No questions asked</li><li>One email or one click</li><li>Keep every asset you made</li></ul>
-    </div>
+  <div class="head"><span class="eyebrow">What you can do with them</span><h2>750 credits, <span class="grad-text">used your way</span></h2></div>
+  <div class="points">
+    <div class="point reveal"><div class="pico">🎨</div><h4>Finish your whole brand kit</h4><p>Spend them creating up to 250 more on-brand assets: headshots, banners, thumbnails, posts, the lot.</p></div>
+    <div class="point reveal"><div class="pico">♾️</div><h4>Use them anywhere in MediaPlace</h4><p>Credits are not locked to the Studio. Spend them on any other MediaPlace project too.</p></div>
+    <div class="point reveal"><div class="pico">⏳</div><h4>They never expire</h4><p>Top up once and use them whenever you like. No deadline, no pressure, they wait for you.</p></div>
   </div>
 </div></section>
 
-<!-- 8. FAQ -->
-<section class="sec-warm"><div class="container">
-  <div class="head"><span class="eyebrow">Questions</span><h2>Good to know</h2></div>
-  <div class="faq">
-    <div class="faq-item"><button class="faq-q" aria-expanded="false">What exactly am I adding for $47?<span class="pm">+</span></button><div class="faq-a"><div>750 AI credits, enough to generate around 250 more finished assets in your Studio. It is a one-time top-up added to your current order. No templates, just credits.</div></div></div>
-    <div class="faq-item"><button class="faq-q" aria-expanded="false">What are credits and what do they do?<span class="pm">+</span></button><div class="faq-a"><div>Credits are the fuel the Studio runs on. Every asset you generate uses a small amount. The more credits you have, the more you can create before topping up again.</div></div></div>
-    <div class="faq-item"><button class="faq-q" aria-expanded="false">Can I use them across all my brand kits?<span class="pm">+</span></button><div class="faq-a"><div>Yes. Credits work across every brand kit you build, for your own brand and for client work.</div></div></div>
-    <div class="faq-item"><button class="faq-q" aria-expanded="false">Do they expire?<span class="pm">+</span></button><div class="faq-a"><div>No. The credits land in your account and stay there until you use them.</div></div></div>
-    <div class="faq-item"><button class="faq-q" aria-expanded="false">What if I change my mind?<span class="pm">+</span></button><div class="faq-a"><div>You are covered by a 30 day money-back guarantee. Email us within 30 days for a full refund and keep anything you have already created.</div></div></div>
-  </div>
-</div></section>
-
-<!-- 9. RED CAUTION -->
+<!-- 6. RED CAUTION -->
 <div class="alarm red big"><h2>⏰ This offer ends the moment you leave this page ⏰</h2></div>
 
-<!-- 10. FINAL CLOSE (boxshot on black) -->
-<section class="boxshot black"><div class="container">
-  <div class="boxshot-card reveal">
-    <div class="bs-ribbon"><span class="rib-full">Last chance, top up your credits before you start</span><span class="rib-short">Last chance to add it</span></div>
-    <div class="boxshot-grid">
-      <div class="boxshot-image">
-        <div class="bs-pic"><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/thumbnails.jpeg" width="820" height="612" loading="lazy" decoding="async" alt="Generate more assets with AI credits"></div>
-        <ul class="bs-ticks">
-          <li>Photoshoot scenes</li><li>Business cards</li><li>Banners</li>
-          <li>Headshot ads</li><li>YouTube thumbs</li><li>Quote cards</li>
-          <li>Story templates</li><li>Call backgrounds</li><li>Mockups</li>
-        </ul>
-      </div>
-      <div class="boxshot-content">
-        <div class="bs-name">250 More Assets</div>
-        <div class="bs-val"><div class="l1">~250 ready-to-post branded assets</div><div class="l2">750 AI credits, yours to spend however you like</div></div>
-        <div class="bs-deal">One time, on this page only:</div>
-        <div class="bs-price"><span class="bs-num">$47</span><span class="bs-tag">One payment<br>Yours to keep</span></div>
-        <a href="#" class="btn btn-lg">YES! Add to my order ($47) →</a>
-        <div class="bs-trust">30-day money-back guarantee</div>
-        <a href="#" class="decline">No thanks, I will pass on the credits</a>
-      </div>
-    </div>
-  </div>
+<!-- 7. FINAL CTA -->
+<section class="sec-dark tc"><div class="container">
+  <h2>Top up your credits before you go</h2>
+  <p style="max-width:560px;margin:0 auto 26px">750 AI credits, around 250 more branded assets, for a one-time $47. This page does not come back.</p>
+  <a href="#" class="btn btn-lg" style="margin:0 auto">YES! Add to my order ($47) →</a>
 </div></section>
 
 <footer><div class="container">The AI Personal Brand Studio, a new tab inside MediaPlace. &copy; <span id="yr"></span> MediaPlace.</div></footer>
 
 <script>
 document.getElementById('yr').textContent=new Date().getFullYear();
-document.querySelectorAll('.faq-q').forEach(function(b){b.addEventListener('click',function(){var o=b.getAttribute('aria-expanded')==='true';var a=b.nextElementSibling;b.setAttribute('aria-expanded',!o);a.style.maxHeight=o?null:a.scrollHeight+'px'})});
 (function(){var KEY='mp_ds_end';var end=localStorage.getItem(KEY);if(!end){end=Date.now()+10*60*1000;localStorage.setItem(KEY,end)}end=parseInt(end,10);var el=document.getElementById('cd');function t(){var s=Math.max(0,Math.floor((end-Date.now())/1000));var m=String(Math.floor(s/60)).padStart(2,'0');var ss=String(s%60).padStart(2,'0');if(el)el.textContent=m+':'+ss}t();setInterval(t,1000)})();
 (function(){if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;var els=[].slice.call(document.querySelectorAll('.reveal'));if(!('IntersectionObserver'in window)){els.forEach(function(e){e.classList.add('in')});return}var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:0.08,rootMargin:'0px 0px -40px 0px'});els.forEach(function(e){io.observe(e)})})();
 </script>
