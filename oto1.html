@@ -6,6 +6,8 @@
 <title>One-time offer: The 920 Bundle | MediaPlace</title>
 <meta name="description" content="Add The 920 Bundle: 920 extra premium templates and presets across 10 categories, plus 1,500 credits, for a one-time $67. Only on this page.">
 <meta name="theme-color" content="#bf0fc9">
+<link rel="icon" type="image/png" href="https://launch-partner.github.io/mediaplace-pbs-preview/assets/favicon.png">
+<link rel="apple-touch-icon" href="https://launch-partner.github.io/mediaplace-pbs-preview/assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
@@ -83,9 +85,10 @@ section{padding:70px 0}
 .boxshot-grid{display:grid;grid-template-columns:1fr 1fr;gap:38px;align-items:center}
 .boxshot-image{display:flex;flex-direction:column;gap:18px}
 .bs-pic{border-radius:14px;overflow:hidden;border:1px solid rgba(0,0,0,.06);box-shadow:0 14px 30px rgba(191,15,201,.16)}
-.bs-ticks{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:5px 14px}
-.bs-ticks li{font-weight:600;font-size:.82rem;color:var(--text);display:flex;gap:6px;align-items:center;line-height:1.25}
+.bs-ticks{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:8px 14px}
+.bs-ticks li{font-weight:600;font-size:.8rem;color:var(--text);display:flex;gap:5px;align-items:baseline;line-height:1.2;flex-wrap:wrap}
 .bs-ticks li::before{content:'✓';color:var(--success);font-weight:800;flex-shrink:0}
+.bs-ticks .ct{color:var(--brand-deep);font-weight:800}
 .boxshot-content{text-align:center;display:flex;flex-direction:column;align-items:center}
 .bs-name{font-weight:900;font-size:clamp(1.7rem,3vw,2.4rem);line-height:1.05;margin-bottom:12px}
 .bs-val{font-weight:700;color:var(--text-mute);margin-bottom:6px}.bs-val strong{color:var(--text);font-weight:900;font-size:1.3rem}
@@ -94,13 +97,28 @@ section{padding:70px 0}
 .bs-num{font-weight:900;font-size:clamp(3.4rem,7vw,4.8rem);line-height:.9;color:var(--brand-deep)}
 .bs-tag{background:#14101c;color:#fff;font-weight:800;font-size:.72rem;letter-spacing:.04em;text-transform:uppercase;padding:6px 12px;border-radius:8px;margin-top:8px;line-height:1.2;text-align:left}
 .boxshot-content .btn{width:100%;max-width:440px}
-.bs-trust{margin-top:13px;font-weight:600;font-size:.9rem}
+.bs-trust{margin-top:13px;font-weight:700;font-size:.92rem;color:var(--success);display:inline-flex;align-items:center;gap:8px}
+.bs-trust::before{content:'✓';font-weight:900}
 
 .sec-dark{background:radial-gradient(ellipse 1000px 700px at 50% 25%,rgba(191,15,201,.24),transparent 60%),var(--bg-dark);color:#f7f7ff}
 .sec-dark h2,.sec-dark h3{color:#fff}.sec-dark p{color:#d6cfe2}
 .sec-warm{background:var(--bg-warm)}
 
-/* visual gallery (merged summary + deep-dive) */
+/* bundle intro (merged) */
+.bundle-intro{text-align:center;margin-bottom:50px}
+.bundle-intro .lock{display:inline-flex;align-items:center;gap:8px;background:var(--brand-tint);border:1px solid var(--brand-light);color:var(--brand-deep);border-radius:100px;padding:8px 18px;font-weight:800;font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px}
+.bundle-intro h2{margin-bottom:6px}
+.bundle-intro .anchor{color:var(--text-mute);text-decoration:line-through;font-weight:600;font-size:1.1rem}
+.bundle-intro .price{font-weight:900;font-size:clamp(3.4rem,8vw,5rem);line-height:1;color:var(--brand-deep);margin-top:8px}
+.bundle-intro .price span{font-size:1rem;font-weight:700;color:var(--text-mute)}
+.scards{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;max-width:880px;margin:30px auto 0}
+.scard2{flex:1 1 180px;min-width:170px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:20px 14px;text-align:center;box-shadow:0 8px 22px rgba(191,15,201,.06)}
+.scard2 .n{font-weight:900;font-size:1.8rem;color:var(--brand);line-height:1}
+.scard2 .l{font-size:.84rem;color:var(--text-mute);margin-top:6px;white-space:nowrap}
+.bundle-cta{display:flex;flex-direction:column;align-items:center;gap:8px;margin-top:30px}
+.bundle-cta .microtrust{color:var(--text-mute)}
+
+/* visual gallery */
 .ggrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1080px;margin:0 auto}
 .gcard{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 10px 30px rgba(191,15,201,.08);transition:transform .18s,box-shadow .18s}
 .gcard:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(191,15,201,.16)}
@@ -113,56 +131,36 @@ section{padding:70px 0}
 .sum-total{text-align:center;margin-top:30px;font-weight:800;font-size:1.1rem;color:var(--text)}
 .sum-total .grad-text{font-size:1.3rem}
 
+/* deep-dive alternating rows */
+.crow{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;max-width:1060px;margin:0 auto}
+.crow+.crow{margin-top:58px}
+.crow.flip .cr-text{order:2}.crow.flip .cr-media{order:1}
+.cr-eyebrow{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--brand-deep);background:var(--brand-tint);border:1px solid var(--brand-light);padding:6px 14px;border-radius:100px;margin-bottom:12px}
+.cr-text h3{margin-bottom:10px}.cr-text>p{font-size:1.02rem}
+.cr-list{list-style:none;margin-top:16px;display:flex;flex-direction:column;gap:9px}
+.cr-list li{display:flex;gap:10px;font-size:.96rem;color:var(--text-body)}.cr-list .tk{color:var(--success);font-weight:800;flex-shrink:0}
+.cr-media img{border-radius:var(--radius-lg);box-shadow:0 18px 44px rgba(191,15,201,.16);border:1px solid var(--border);width:100%}
+
 /* picture this */
 .picture{max-width:1040px;margin:0 auto;background:var(--grad);color:#fff;border-radius:var(--radius-lg);padding:clamp(40px,6vw,60px);text-align:center}
-.picture .eyebrow{color:rgba(255,255,255,.9)}
-.picture h3{color:#fff;font-size:clamp(1.5rem,3.2vw,2.1rem);max-width:820px;margin:10px auto 0}
-.picture .serif{font-style:italic;font-family:Georgia,serif}
-.picture p{color:rgba(255,255,255,.95);max-width:640px;margin:16px auto 0;font-size:1.06rem}
 
-/* deal block */
-.deal{text-align:center}
-.deal .lock{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:100px;padding:8px 18px;font-weight:800;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:14px}
-.deal h2{margin-bottom:10px}
-.deal .big{font-weight:900;font-size:clamp(3.6rem,9vw,5.4rem);line-height:1;color:#fff}
-.deal .anchor{color:rgba(255,255,255,.6);text-decoration:line-through;font-weight:600;font-size:1.2rem}
-.deal-cards{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin:30px auto 0;max-width:820px}
-.deal-cards .dc{flex:1 1 160px;min-width:160px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:var(--radius);padding:18px;text-align:center}
-.deal-cards .dc .dn{font-weight:900;font-size:1.5rem;color:#fff}
-.deal-cards .dc .dl{font-size:.84rem;color:#cfc6de;margin-top:3px}
-.microtrust{display:flex;flex-wrap:wrap;gap:12px 22px;justify-content:center;margin-top:22px;color:#d6cfe2;font-size:.92rem;font-weight:600}
+/* long-form future-pace */
+.longform .lf{max-width:760px;margin:0 auto;text-align:center}
+.longform .lf p{font-size:1.12rem;line-height:1.75;color:var(--text-body);margin-bottom:18px}
+.longform .lf p .em{font-weight:800;color:var(--text)}
+.longform .lf .lead{font-family:Georgia,serif;font-style:italic;font-size:clamp(1.4rem,3vw,2rem);font-weight:400;color:var(--text);line-height:1.3;margin-bottom:24px}
+.lf-cta{display:flex;flex-direction:column;align-items:center;gap:8px;margin-top:34px}
+
+.microtrust{display:flex;flex-wrap:wrap;gap:12px 22px;justify-content:center;margin-top:4px;color:#d6cfe2;font-size:.92rem;font-weight:600}
 .microtrust span{display:inline-flex;align-items:center;gap:7px}.microtrust span::before{content:'✓';color:#34d399;font-weight:800}
 
-/* the math */
-.math{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:1000px;margin:0 auto;align-items:stretch}
-.mcard{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px 28px;display:flex;flex-direction:column;position:relative}
-.mcard.win{border:2px solid var(--brand)}
-.mcard .ribbon{position:absolute;top:14px;right:-6px;background:var(--grad);color:#fff;font-weight:800;font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;padding:6px 14px;border-radius:6px}
-.mcard .opt{font-weight:700;color:var(--text-mute);font-size:.9rem;margin-bottom:6px}
-.mcard .mprice{font-weight:900;font-size:clamp(1.8rem,3.5vw,2.4rem);margin-bottom:16px}
-.mcard.lose .mprice{color:var(--text-mute)}.mcard.win .mprice{color:var(--brand)}
-.mcard ul{list-style:none;display:flex;flex-direction:column;gap:9px}
-.mcard li{display:flex;gap:9px;font-size:.94rem;color:var(--text-body)}
-.mcard .x{color:var(--danger);font-weight:800;flex-shrink:0}.mcard .c{color:var(--success);font-weight:800;flex-shrink:0}
-/* cost bar chart */
-.bars{display:flex;align-items:flex-end;justify-content:center;gap:clamp(34px,9vw,90px);max-width:680px;margin:0 auto 36px;height:286px}
-.bar{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;flex:1;max-width:210px;height:100%}
-.bar .bval{font-weight:900;font-size:clamp(1.1rem,2.6vw,1.6rem);margin-bottom:12px;color:var(--text)}
-.bar.b .bval{color:var(--brand)}
-.bar .bcol{width:100%;border-radius:16px 16px 0 0;display:flex;align-items:flex-start;justify-content:center;color:#fff;font-weight:800;padding-top:14px}
-.bar.a .bcol{height:228px;background:linear-gradient(180deg,#b8b3c9,#938da9)}
-.bar.b .bcol{height:44px;background:var(--grad);padding-top:9px;font-size:.92rem}
-.bar .ico{font-size:1.5rem;line-height:1}
-.bar .blabel{margin-top:14px;font-weight:700;font-size:.92rem;color:var(--text-body);text-align:center}
-.punch{max-width:1000px;margin:30px auto 0;background:var(--grad);color:#fff;border-radius:var(--radius-lg);padding:30px;text-align:center}
-.punch .big{font-weight:900;font-size:clamp(1.8rem,5vw,2.8rem);color:#fff}.punch p{color:rgba(255,255,255,.95);margin-top:6px}
-
-/* recap (dark, full width) */
+/* recap (dark, full width, single column) */
 .recap{max-width:1040px;margin:0 auto;background:var(--bg-card);border:1px solid var(--border-strong);border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 20px 48px -12px rgba(0,0,0,.4)}
 .recap-head{padding:16px 32px;background:var(--bg-warm);font-weight:800;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--brand-deep);display:flex;justify-content:space-between;border-bottom:1px solid var(--border)}
-.recap-list{padding:10px 32px 22px;display:grid;grid-template-columns:1fr 1fr;gap:0 48px}
-.rrow{display:flex;justify-content:space-between;gap:14px;padding:13px 0;border-bottom:1px dashed var(--border-strong)}
-.rrow .nm{font-weight:600;font-size:.96rem}.rrow .v{font-weight:800;white-space:nowrap}
+.recap-list{padding:8px 32px 22px}
+.rrow{display:flex;justify-content:space-between;gap:14px;padding:14px 0;border-bottom:1px dashed var(--border-strong)}
+.rrow:last-child{border-bottom:none}
+.rrow .nm{font-weight:600;font-size:1rem}.rrow .v{font-weight:800;white-space:nowrap}
 .recap-total{background:var(--grad);color:#fff;text-align:center;padding:34px 26px}
 .recap-total .ln{font-size:1rem;color:rgba(255,255,255,.94);font-weight:600}.recap-total .ln strong{color:#fff;font-weight:900}
 .recap-total .big{font-weight:900;font-size:clamp(3rem,7vw,4.2rem);line-height:1;margin:8px 0 4px;color:#fff}
@@ -204,16 +202,19 @@ footer{background:#100920;color:#9a8fae;padding:30px 0;text-align:center;font-si
 .reveal.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1!important;transform:none!important}}
 
-@media(max-width:860px){.boxshot-grid{grid-template-columns:1fr;gap:26px}.math{grid-template-columns:1fr}.ggrid{grid-template-columns:repeat(2,1fr)}.recap-list{grid-template-columns:1fr;gap:0}}
+@media(max-width:860px){
+  .boxshot-grid{grid-template-columns:1fr;gap:26px}
+  .ggrid{grid-template-columns:repeat(2,1fr)}
+  .crow{grid-template-columns:1fr;gap:24px}.crow .cr-media,.crow.flip .cr-media{order:-1}.crow .cr-text,.crow.flip .cr-text{order:2}
+}
 @media(max-width:600px){
   section{padding:46px 0}.container{padding:0 16px}
   h1{font-size:2rem}h2{font-size:1.5rem}h3{font-size:1.35rem}
   .btn{padding:15px 22px;font-size:.97rem;max-width:100%}.btn-lg{padding:17px 24px;font-size:1.02rem}
   .boxshot-card{padding:46px 20px 30px}
   .bs-ribbon{left:14px;right:14px;transform:none;max-width:none;text-align:center;font-size:.72rem;top:-13px;padding:8px 12px}.rib-full{display:none}.rib-short{display:inline}
-  .bs-num{font-size:3.2rem}
+  .bs-num{font-size:3.2rem}.bs-ticks{grid-template-columns:repeat(2,1fr)}
   .ggrid{grid-template-columns:1fr}
-  .bars{height:240px;gap:30px}.bar.a .bcol{height:188px}
   .guar-card{grid-template-columns:1fr;text-align:center;gap:22px;padding:34px 22px}.guar-checks{grid-template-columns:1fr;max-width:280px;margin:0 auto}
   .guar-shield{width:130px;height:130px}.guar-shield svg{width:88px;height:88px}
 }
@@ -222,14 +223,14 @@ footer{background:#100920;color:#9a8fae;padding:30px 0;text-align:center;font-si
 </head>
 <body>
 
-<!-- 1. TOPBAR -->
+<!-- 1. INTERRUPT (top of page, above header) -->
+<div class="interrupt"><h2>⚠️ Your order is not complete. Do not close this page. ⚠️</h2></div>
+
+<!-- 2. TOPBAR -->
 <header class="topbar"><div class="topbar-in">
-  <span class="lg"><img src="assets/mediaplace-logo.svg" alt="MediaPlace"></span>
+  <span class="lg"><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/mediaplace-logo.svg" alt="MediaPlace"></span>
   <div class="tb-mid"><span class="step-pill">Step 2 of 3</span><span class="cd">Expires in <strong id="cd">10:00</strong></span><a href="#" class="tb-cta">Add for $67</a></div>
 </div></header>
-
-<!-- 2. INTERRUPT -->
-<div class="interrupt"><h2>⚠️ Your order is not complete. Do not close this page. ⚠️</h2></div>
 
 <!-- 3. HERO -->
 <section class="hero"><div class="container">
@@ -249,13 +250,11 @@ footer{background:#100920;color:#9a8fae;padding:30px 0;text-align:center;font-si
     <div class="bs-ribbon"><span class="rib-full">Add it to your order in one click, available on this page only</span><span class="rib-short">One click to add it</span></div>
     <div class="boxshot-grid">
       <div class="boxshot-image">
-        <div class="bs-pic"><img src="assets/cat/quotes.jpeg" width="820" height="612" loading="lazy" decoding="async" alt="Premium templates in The 920 Bundle"></div>
+        <div class="bs-pic"><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/quotes.jpeg" width="820" height="612" loading="lazy" decoding="async" alt="Premium templates in The 920 Bundle"></div>
         <ul class="bs-ticks">
-          <li>Photoshoot scenes</li><li>Business cards</li>
-          <li>Banners</li><li>Headshot ads</li>
-          <li>YouTube thumbs</li><li>Quote cards</li>
-          <li>Story templates</li><li>Call backgrounds</li>
-          <li>Mockups</li><li>Fun styles</li>
+          <li>Photoshoot scenes <span class="ct">+390</span></li><li>Business cards <span class="ct">+111</span></li><li>Banners <span class="ct">+80</span></li>
+          <li>Headshot ads <span class="ct">+62</span></li><li>YouTube thumbs <span class="ct">+62</span></li><li>Quote cards <span class="ct">+62</span></li>
+          <li>Story templates <span class="ct">+62</span></li><li>Call backgrounds <span class="ct">+52</span></li><li>Mockups <span class="ct">+34</span></li>
         </ul>
       </div>
       <div class="boxshot-content">
@@ -274,74 +273,96 @@ footer{background:#100920;color:#9a8fae;padding:30px 0;text-align:center;font-si
 <!-- 5. CAUTION BANNER -->
 <div class="alarm"><h2>⚠️ Wait, your order is not complete yet ⚠️</h2></div>
 
-<!-- 6. VISUAL GALLERY (merged summary + deep-dive) -->
+<!-- 6. THE 920 BUNDLE: intro + summary + CTA, then unpack the cards -->
 <section><div class="container">
-  <div class="head"><span class="eyebrow">What you get</span><h2>920 extra templates &amp; presets, <span class="grad-text">across every category</span></h2><p>The real styles and presets waiting inside your Studio, each one ready to drop your face and brand into in a single click.</p></div>
+  <div class="bundle-intro reveal">
+    <span class="lock">🔓 Limited one-time deal</span>
+    <span class="eyebrow">Introducing</span>
+    <h2>The 920 Bundle</h2>
+    <div class="anchor">Hundreds of designs a studio would charge a fortune to build</div>
+    <div class="price">$67 <span>one time</span></div>
+    <div class="scards">
+      <div class="scard2"><div class="n">920</div><div class="l">extra assets</div></div>
+      <div class="scard2"><div class="n">10</div><div class="l">categories</div></div>
+      <div class="scard2"><div class="n">1,500</div><div class="l">credits included</div></div>
+      <div class="scard2"><div class="n">∞</div><div class="l">lifetime access</div></div>
+    </div>
+    <div class="bundle-cta">
+      <a href="#" class="btn btn-lg">YES! Add to my order ($67) →</a>
+      <span class="guarline">Make your $67 back in 30 days or a full refund</span>
+      <div class="microtrust"><span>Added to your order</span><span>30 day refund</span><span>No subscription</span></div>
+    </div>
+  </div>
+
   <div class="ggrid">
-    <div class="gcard reveal"><div class="gimg"><span class="gcount">+390</span><img src="assets/cat/lifestyle.jpeg" width="820" height="612" loading="lazy" decoding="async" alt="Photoshoot scenes and presets"></div><div class="gbody"><h4>Photoshoot scenes &amp; presets <span class="grad-text">+390</span></h4><p class="gstyles">Color Studio, Broadcast Desk, Penthouse, Greenhouse, Private Jet and more. Generate 30 at once across every category.</p></div></div>
-    <div class="gcard reveal"><div class="gimg"><span class="gcount">+111</span><img src="assets/cat/cards.jpeg" width="820" height="612" loading="lazy" decoding="async" alt="Business card templates"></div><div class="gbody"><h4>Business cards <span class="grad-text">+111</span></h4><p class="gstyles">Aurora, Corporate, Deco, Luxe, Chrome, Marble, Velvet, Holo and more, all print ready.</p></div></div>
-    <div class="gcard reveal"><div class="gimg"><span class="gcount">+80</span><img src="assets/cat/banners.jpeg" width="820" height="612" loading="lazy" decoding="async" alt="Banner and header templates"></div><div class="gbody"><h4>Banners &amp; headers <span class="grad-text">+80</span></h4><p class="gstyles">LinkedIn, X, Facebook and website header layouts, every one matched to your brand.</p></div></div>
-    <div class="gcard reveal"><div class="gimg"><span class="gcount">+62</span><img src="assets/cat/ads.jpeg" width="820" height="612" loading="lazy" decoding="async" alt="Headshot ad templates"></div><div class="gbody"><h4>Headshot ads <span class="grad-text">+62</span></h4><p class="gstyles">Stat Highlight, Testimonial, Editorial, Neon Promo, Duotone, Glass Card and more.</p></div></div>
-    <div class="gcard reveal"><div class="gimg"><span class="gcount">+62</span><img src="assets/cat/thumbnails.jpeg" width="820" height="612" loading="lazy" decoding="async" alt="YouTube thumbnail templates"></div><div class="gbody"><h4>YouTube thumbnails <span class="grad-text">+62</span></h4><p class="gstyles">Split Reaction, Comic Pop, Glitch, Retro VHS, Speed Lines, Billboard and more.</p></div></div>
-    <div class="gcard reveal"><div class="gimg"><span class="gcount">+62</span><img src="assets/cat/quotes.jpeg" width="820" height="612" loading="lazy" decoding="async" alt="Quote card templates"></div><div class="gbody"><h4>Quote cards <span class="grad-text">+62</span></h4><p class="gstyles">Neon, Paper Note, Geometric, Luxe Gold, Brush, Deco Fan and more, ready to share.</p></div></div>
-    <div class="gcard reveal"><div class="gimg"><span class="gcount">+62</span><img src="assets/cat/social.jpeg" width="820" height="612" loading="lazy" decoding="async" alt="Story templates"></div><div class="gbody"><h4>Story templates <span class="grad-text">+62</span></h4><p class="gstyles">Paper Note, Polaroid, Color Bands, Foil Strip, Spot Gloss, Gilded Edge and more.</p></div></div>
-    <div class="gcard reveal"><div class="gimg"><span class="gcount">+52</span><img src="assets/cat/zoom.jpeg" width="820" height="612" loading="lazy" decoding="async" alt="Call background templates"></div><div class="gbody"><h4>Call backgrounds <span class="grad-text">+52</span></h4><p class="gstyles">Garden View, Podcast Studio, Penthouse View, Boardroom, Library, Zen Retreat and more.</p></div></div>
-    <div class="gcard reveal"><div class="gimg"><span class="gcount">+34</span><img src="assets/cat/profile.jpeg" width="820" height="612" loading="lazy" decoding="async" alt="Mockup templates"></div><div class="gbody"><h4>Mockups <span class="grad-text">+34</span></h4><p class="gstyles">Boarding Pass, Certificate, Coffee Mug, Folded Tee, Canvas Tote, Comic Cover and more.</p></div></div>
+    <div class="gcard reveal"><div class="gimg"><span class="gcount">+390</span><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/lifestyle.jpeg" width="820" height="612" loading="lazy" decoding="async" alt="Photoshoot scenes and presets"></div><div class="gbody"><h4>Photoshoot scenes &amp; presets <span class="grad-text">+390</span></h4><p class="gstyles">Color Studio, Broadcast Desk, Penthouse, Greenhouse, Private Jet and more. Generate 30 at once across every category.</p></div></div>
+    <div class="gcard reveal"><div class="gimg"><span class="gcount">+111</span><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/cards.jpeg" width="820" height="612" loading="lazy" decoding="async" alt="Business card templates"></div><div class="gbody"><h4>Business cards <span class="grad-text">+111</span></h4><p class="gstyles">Aurora, Corporate, Deco, Luxe, Chrome, Marble, Velvet, Holo and more, all print ready.</p></div></div>
+    <div class="gcard reveal"><div class="gimg"><span class="gcount">+80</span><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/banners.jpeg" width="820" height="612" loading="lazy" decoding="async" alt="Banner and header templates"></div><div class="gbody"><h4>Banners &amp; headers <span class="grad-text">+80</span></h4><p class="gstyles">LinkedIn, X, Facebook and website header layouts, every one matched to your brand.</p></div></div>
+    <div class="gcard reveal"><div class="gimg"><span class="gcount">+62</span><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/ads.jpeg" width="820" height="612" loading="lazy" decoding="async" alt="Headshot ad templates"></div><div class="gbody"><h4>Headshot ads <span class="grad-text">+62</span></h4><p class="gstyles">Stat Highlight, Testimonial, Editorial, Neon Promo, Duotone, Glass Card and more.</p></div></div>
+    <div class="gcard reveal"><div class="gimg"><span class="gcount">+62</span><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/thumbnails.jpeg" width="820" height="612" loading="lazy" decoding="async" alt="YouTube thumbnail templates"></div><div class="gbody"><h4>YouTube thumbnails <span class="grad-text">+62</span></h4><p class="gstyles">Split Reaction, Comic Pop, Glitch, Retro VHS, Speed Lines, Billboard and more.</p></div></div>
+    <div class="gcard reveal"><div class="gimg"><span class="gcount">+62</span><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/quotes.jpeg" width="820" height="612" loading="lazy" decoding="async" alt="Quote card templates"></div><div class="gbody"><h4>Quote cards <span class="grad-text">+62</span></h4><p class="gstyles">Neon, Paper Note, Geometric, Luxe Gold, Brush, Deco Fan and more, ready to share.</p></div></div>
+    <div class="gcard reveal"><div class="gimg"><span class="gcount">+62</span><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/social.jpeg" width="820" height="612" loading="lazy" decoding="async" alt="Story templates"></div><div class="gbody"><h4>Story templates <span class="grad-text">+62</span></h4><p class="gstyles">Paper Note, Polaroid, Color Bands, Foil Strip, Spot Gloss, Gilded Edge and more.</p></div></div>
+    <div class="gcard reveal"><div class="gimg"><span class="gcount">+52</span><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/zoom.jpeg" width="820" height="612" loading="lazy" decoding="async" alt="Call background templates"></div><div class="gbody"><h4>Call backgrounds <span class="grad-text">+52</span></h4><p class="gstyles">Garden View, Podcast Studio, Penthouse View, Boardroom, Library, Zen Retreat and more.</p></div></div>
+    <div class="gcard reveal"><div class="gimg"><span class="gcount">+34</span><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/profile.jpeg" width="820" height="612" loading="lazy" decoding="async" alt="Mockup templates"></div><div class="gbody"><h4>Mockups <span class="grad-text">+34</span></h4><p class="gstyles">Boarding Pass, Certificate, Coffee Mug, Folded Tee, Canvas Tote, Comic Cover and more.</p></div></div>
   </div>
   <div class="sum-total"><span class="grad-text">920 extra templates &amp; presets</span> + 1,500 credits, added to your order</div>
 </div></section>
 
-<!-- 7. PICTURE THIS -->
-<section class="sec-warm"><div class="container">
-  <div class="picture reveal">
-    <span class="eyebrow">Picture this</span>
-    <h3><span class="serif">Imagine</span> opening your Studio tomorrow and every style you could ever want is already waiting, on your brand, one click from finished.</h3>
-    <p>No blank page. No "what do I make today." You scroll hundreds of premium templates, tap the one you like, and a polished, on-brand asset appears with your face and your colors already in place. That is the difference between owning the Studio and owning the whole Studio.</p>
+<!-- 7. DEEP-DIVE ROWS (alternating text/image) -->
+<section><div class="container">
+  <div class="head"><span class="eyebrow">A closer look</span><h2>Exactly what unlocks <span class="grad-text">in every category</span></h2></div>
+
+  <div class="crow">
+    <div class="cr-text">
+      <div class="cr-eyebrow">+390 templates &amp; presets</div>
+      <h3>Photoshoot scenes</h3>
+      <p>Drop your face into a fully styled scene, no studio, no photographer, no half-day shoot. Pick a setting and generate, or batch 30 at once across every category.</p>
+      <ul class="cr-list">
+        <li><span class="tk">✓</span>Color Studio, Broadcast Desk, Webinar Set, Art Studio, Modern Kitchen, Greenhouse, Penthouse, Private Jet and more</li>
+        <li><span class="tk">✓</span>A branded photoshoot runs $1,000 plus, you get unlimited ones for life</li>
+      </ul>
+    </div>
+    <div class="cr-media"><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/lifestyle.jpeg" width="820" height="612" loading="lazy" decoding="async" alt="Photoshoot scenes inside the Studio"></div>
+  </div>
+
+  <div class="crow flip">
+    <div class="cr-text">
+      <div class="cr-eyebrow">+111 templates</div>
+      <h3>Business cards</h3>
+      <p>Print-ready cards in every style, from clean corporate to luxe and neon, all matched to your brand automatically.</p>
+      <ul class="cr-list">
+        <li><span class="tk">✓</span>Aurora, Corporate, Deco, Neon, Memphis, Luxe, Glass, Chrome, Marble, Velvet, Holo</li>
+        <li><span class="tk">✓</span>Design a card for every client you onboard, a service worth $50 to $150 on its own</li>
+      </ul>
+    </div>
+    <div class="cr-media"><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/cards.jpeg" width="820" height="612" loading="lazy" decoding="async" alt="Business card templates inside the Studio"></div>
+  </div>
+
+  <div class="crow">
+    <div class="cr-text">
+      <div class="cr-eyebrow">+80 templates</div>
+      <h3>Banners &amp; headers</h3>
+      <p>One on-brand header for every platform you show up on, sized perfectly and finished in a click.</p>
+      <ul class="cr-list">
+        <li><span class="tk">✓</span>LinkedIn, X, Facebook and website header layouts, all on your colors and your face</li>
+        <li><span class="tk">✓</span>A single LinkedIn banner on Fiverr sells for $30 to $80, you get 80 styles for life</li>
+      </ul>
+    </div>
+    <div class="cr-media"><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/banners.jpeg" width="820" height="612" loading="lazy" decoding="async" alt="Banner and header templates inside the Studio"></div>
   </div>
 </div></section>
 
-<!-- 8. INTRODUCING -->
-<section class="sec-dark"><div class="container deal">
-  <span class="lock">🔓 Limited one-time deal</span>
-  <span class="eyebrow" style="color:var(--brand-light)">Introducing</span>
-  <h2>The 920 Bundle</h2>
-  <div class="anchor">Hundreds of designs a studio would charge a fortune to build</div>
-  <div class="big">$67 <span style="font-size:1rem;font-weight:700;color:#cfc6de">one time</span></div>
-  <div class="deal-cards">
-    <div class="dc"><div class="dn">920</div><div class="dl">extra templates &amp; presets</div></div>
-    <div class="dc"><div class="dn">10</div><div class="dl">categories</div></div>
-    <div class="dc"><div class="dn">1,500</div><div class="dl">credits included</div></div>
-    <div class="dc"><div class="dn">∞</div><div class="dl">lifetime access</div></div>
-  </div>
-  <div style="margin-top:28px"><a href="#" class="btn btn-lg" style="margin:0 auto">YES! Add to my order ($67) →</a></div>
-  <div class="microtrust"><span>Added to your order</span><span>30 day refund</span><span>No subscription</span></div>
-</div></section>
-
-<!-- 8.5 PAYS FOR ITSELF -->
-<section class="credits"><div class="container tc">
-  <span class="eyebrow">It pays for itself</span>
-  <h2>Your $67 comes straight back in credits</h2>
-  <p>The bundle also drops <strong>1,500 AI credits</strong> into your account, valued at $67 and enough to generate around 500 assets. So the moment you add it, the upgrade has paid for itself, and the 920 templates and presets are the part you keep on top, for life.</p>
-  <div class="credit-stats">
-    <div class="cs"><b>$67</b><span>in free AI credits, included</span></div>
-    <div class="cs"><b>~500</b><span>assets you can generate</span></div>
-    <div class="cs"><b>$0</b><span>net cost, it pays for itself</span></div>
-  </div>
-</div></section>
-
-<!-- MID OFFER BANNER (reused boxshot) -->
+<!-- MID OFFER BANNER -->
 <section class="boxshot"><div class="container">
   <div class="boxshot-card reveal">
     <div class="bs-ribbon"><span class="rib-full">Add it to your order in one click, available on this page only</span><span class="rib-short">One click to add it</span></div>
     <div class="boxshot-grid">
       <div class="boxshot-image">
-        <div class="bs-pic"><img src="assets/cat/cards.jpeg" width="820" height="612" loading="lazy" decoding="async" alt="Premium templates in The 920 Bundle"></div>
+        <div class="bs-pic"><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/cards.jpeg" width="820" height="612" loading="lazy" decoding="async" alt="Premium templates in The 920 Bundle"></div>
         <ul class="bs-ticks">
-          <li>Photoshoot scenes</li><li>Business cards</li>
-          <li>Banners</li><li>Headshot ads</li>
-          <li>YouTube thumbs</li><li>Quote cards</li>
-          <li>Story templates</li><li>Call backgrounds</li>
-          <li>Mockups</li><li>Fun styles</li>
+          <li>Photoshoot scenes <span class="ct">+390</span></li><li>Business cards <span class="ct">+111</span></li><li>Banners <span class="ct">+80</span></li>
+          <li>Headshot ads <span class="ct">+62</span></li><li>YouTube thumbs <span class="ct">+62</span></li><li>Quote cards <span class="ct">+62</span></li>
+          <li>Story templates <span class="ct">+62</span></li><li>Call backgrounds <span class="ct">+52</span></li><li>Mockups <span class="ct">+34</span></li>
         </ul>
       </div>
       <div class="boxshot-content">
@@ -357,40 +378,156 @@ footer{background:#100920;color:#9a8fae;padding:30px 0;text-align:center;font-si
   </div>
 </div></section>
 
-<!-- 10. ROI / BUILD IT YOURSELF -->
-<section class="sec-warm"><div class="container">
-  <div class="head"><span class="eyebrow">The math</span><h2>Build it yourself, or add it for $67</h2></div>
-  <div class="bars reveal">
-    <div class="bar a"><div class="bval">$30,000+</div><div class="bcol"><span class="ico">🧾</span></div><div class="blabel">Hiring designers to build a library this size</div></div>
-    <div class="bar b"><div class="bval">$67</div><div class="bcol"><span class="ico">⚡</span></div><div class="blabel">The 920 Bundle, ready in one click today</div></div>
-  </div>
-  <div class="math">
-    <div class="mcard lose reveal">
-      <div class="opt">Option A: build the library yourself</div>
-      <div class="mprice">$30,000+ and months</div>
-      <ul>
-        <li><span class="x">✗</span>Pay designers $30 to $80 per template</li>
-        <li><span class="x">✗</span>Brief, revise and chase, hundreds of times over</li>
-        <li><span class="x">✗</span>Wait weeks for a library this size</li>
-        <li><span class="x">✗</span>Re-do it every time your brand changes</li>
+<section><div class="container">
+  <div class="crow">
+    <div class="cr-text">
+      <div class="cr-eyebrow">+62 templates</div>
+      <h3>Headshot ads</h3>
+      <p>Turn one photo into scroll-stopping ads in seconds, in styles built to convert, not just look pretty.</p>
+      <ul class="cr-list">
+        <li><span class="tk">✓</span>Stat Highlight, Testimonial, Editorial, Neon Promo, Duotone, Badge Burst, Glass Card and more</li>
+        <li><span class="tk">✓</span>Run them as your own paid ads, or sell ad creative to clients for $50 to $200 a set</li>
       </ul>
     </div>
-    <div class="mcard win reveal">
-      <span class="ribbon">Recommended</span>
-      <div class="opt">Option B: The 920 Bundle</div>
-      <div class="mprice">$67 once</div>
-      <ul>
-        <li><span class="c">✓</span>920 premium templates and presets, ready right now</li>
-        <li><span class="c">✓</span>Every one already on your brand, one click to finish</li>
-        <li><span class="c">✓</span>1,500 credits included to build today</li>
-        <li><span class="c">✓</span>Yours for life, use them for clients too</li>
+    <div class="cr-media"><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/ads.jpeg" width="820" height="612" loading="lazy" decoding="async" alt="Headshot ad templates inside the Studio"></div>
+  </div>
+
+  <div class="crow flip">
+    <div class="cr-text">
+      <div class="cr-eyebrow">+62 templates</div>
+      <h3>YouTube thumbnails</h3>
+      <p>Bold, high-contrast thumbnails with you in them, the kind that actually earn the click.</p>
+      <ul class="cr-list">
+        <li><span class="tk">✓</span>Split Reaction, Comic Pop, Glitch, Retro VHS, Torn Paper, Speed Lines, Billboard and more</li>
+        <li><span class="tk">✓</span>Thumbnail designers charge $20 to $50 each, you get dozens of styles for life</li>
       </ul>
     </div>
+    <div class="cr-media"><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/thumbnails.jpeg" width="820" height="612" loading="lazy" decoding="async" alt="YouTube thumbnail templates inside the Studio"></div>
   </div>
-  <div class="punch reveal"><div class="big">Sell ONE template to ONE client and you are already in profit</div><p>One LinkedIn banner or thumbnail on Fiverr pays for the whole bundle, several times over. Everything after that is pure margin.</p></div>
+
+  <div class="crow">
+    <div class="cr-text">
+      <div class="cr-eyebrow">+62 templates</div>
+      <h3>Quote cards</h3>
+      <p>Turn your best lines into share-ready graphics that look designed, not thrown together, perfect for daily posts and stories.</p>
+      <ul class="cr-list">
+        <li><span class="tk">✓</span>Neon, Paper Note, Geometric, Photo Overlay, Luxe Gold, Brush, Deco Fan and more</li>
+        <li><span class="tk">✓</span>Fill a month of content in an afternoon, or run a client's whole quote feed</li>
+      </ul>
+    </div>
+    <div class="cr-media"><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/quotes.jpeg" width="820" height="612" loading="lazy" decoding="async" alt="Quote card templates inside the Studio"></div>
+  </div>
 </div></section>
 
-<!-- 11. RECAP (dark, full width) -->
+<!-- MID OFFER BANNER -->
+<section class="boxshot"><div class="container">
+  <div class="boxshot-card reveal">
+    <div class="bs-ribbon"><span class="rib-full">Add it to your order in one click, available on this page only</span><span class="rib-short">One click to add it</span></div>
+    <div class="boxshot-grid">
+      <div class="boxshot-image">
+        <div class="bs-pic"><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/social.jpeg" width="820" height="612" loading="lazy" decoding="async" alt="Premium templates in The 920 Bundle"></div>
+        <ul class="bs-ticks">
+          <li>Photoshoot scenes <span class="ct">+390</span></li><li>Business cards <span class="ct">+111</span></li><li>Banners <span class="ct">+80</span></li>
+          <li>Headshot ads <span class="ct">+62</span></li><li>YouTube thumbs <span class="ct">+62</span></li><li>Quote cards <span class="ct">+62</span></li>
+          <li>Story templates <span class="ct">+62</span></li><li>Call backgrounds <span class="ct">+52</span></li><li>Mockups <span class="ct">+34</span></li>
+        </ul>
+      </div>
+      <div class="boxshot-content">
+        <div class="bs-name">The 920 Bundle</div>
+        <div class="bs-val">920 extra templates &amp; presets &middot; 1,500 credits</div>
+        <div class="bs-deal">One time, on this page only:</div>
+        <div class="bs-price"><span class="bs-num">$67</span><span class="bs-tag">One payment<br>Lifetime access</span></div>
+        <a href="#" class="btn btn-lg">YES! Add to my order ($67) →</a>
+        <div class="bs-trust">Make your $67 back in 30 days or a full refund</div>
+        <a href="#" class="decline">No thanks, I will pass on the 920 templates</a>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="container">
+  <div class="crow">
+    <div class="cr-text">
+      <div class="cr-eyebrow">+62 templates</div>
+      <h3>Story templates</h3>
+      <p>Vertical story layouts for Instagram, TikTok and LinkedIn that keep your whole feed looking like one cohesive brand.</p>
+      <ul class="cr-list">
+        <li><span class="tk">✓</span>Paper Note, Brush, Polaroid, Color Bands, Foil Strip, Spot Gloss, Gilded Edge and more</li>
+        <li><span class="tk">✓</span>Batch a week of stories in minutes, for yourself or for every client you manage</li>
+      </ul>
+    </div>
+    <div class="cr-media"><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/social.jpeg" width="820" height="612" loading="lazy" decoding="async" alt="Story templates inside the Studio"></div>
+  </div>
+
+  <div class="crow flip">
+    <div class="cr-text">
+      <div class="cr-eyebrow">+52 templates</div>
+      <h3>Call backgrounds</h3>
+      <p>Look sharp on every Zoom, webinar and recorded call with a clean, branded backdrop instead of your messy room.</p>
+      <ul class="cr-list">
+        <li><span class="tk">✓</span>Garden View, Minimal Studio, Podcast Studio, Penthouse View, Boardroom, Library, Zen Retreat and more</li>
+        <li><span class="tk">✓</span>Show up like a pro on every client call and every piece of video you record</li>
+      </ul>
+    </div>
+    <div class="cr-media"><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/zoom.jpeg" width="820" height="612" loading="lazy" decoding="async" alt="Call background templates inside the Studio"></div>
+  </div>
+
+  <div class="crow">
+    <div class="cr-text">
+      <div class="cr-eyebrow">+34 templates</div>
+      <h3>Mockups</h3>
+      <p>Put yourself on anything. Magazine covers, boarding passes, mugs, tees and trading cards, the kind of scroll-stopping content people screenshot.</p>
+      <ul class="cr-list">
+        <li><span class="tk">✓</span>Boarding Pass, Certificate, Travel Postcard, Coffee Mug, Folded Tee, Canvas Tote, Comic Cover and more</li>
+        <li><span class="tk">✓</span>Instant merch and PR mockups you could charge a brand hundreds to produce</li>
+      </ul>
+    </div>
+    <div class="cr-media"><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/profile.jpeg" width="820" height="612" loading="lazy" decoding="async" alt="Mockup templates inside the Studio"></div>
+  </div>
+</div></section>
+
+<!-- 8. PAYS FOR ITSELF -->
+<section class="credits"><div class="container tc">
+  <span class="eyebrow">It pays for itself</span>
+  <h2>Your $67 comes straight back in credits</h2>
+  <p>The bundle also drops <strong>1,500 AI credits</strong> into your account, valued at $67 and enough to generate around 500 assets. So the moment you add it, the upgrade has paid for itself, and the 920 templates and presets are the part you keep on top, for life.</p>
+  <div class="credit-stats">
+    <div class="cs"><b>$67</b><span>in free AI credits, included</span></div>
+    <div class="cs"><b>~500</b><span>assets you can generate</span></div>
+    <div class="cs"><b>$0</b><span>net cost, it pays for itself</span></div>
+  </div>
+</div></section>
+
+<!-- 9. LONG-FORM FUTURE-PACE -->
+<section class="longform"><div class="container">
+  <div class="head"><span class="eyebrow">The bigger picture</span><h2>Picture where this puts you</h2></div>
+  <div class="lf reveal">
+    <p class="lead">Just imagine, it is twelve months from now.</p>
+    <p>You open MediaPlace and there is no blank page waiting for you, no scramble to design a thumbnail before you hit publish, no half-day lost to a banner that still looks a little off. Every asset you could possibly need is already there, on your face, in your colors, one click from finished.</p>
+    <p><span class="em">And here is the part most people miss.</span> You do not need a single new client, a single new follower, or a single new idea for this to pay for itself. All it takes is one afternoon on Fiverr. Make ONE LinkedIn banner for ONE person and your $67 is already back in your pocket, with change to spare.</p>
+    <p>From there it compounds. Spin a set of thumbnails for a creator. Build a deck of quote cards for a coach. Design business cards for the founder you met last week. Each one takes you minutes because the template is already done, and people happily pay $50 to $200 for work you can now turn around before your coffee goes cold. You can quietly run this as a service on the side and never tell a soul how fast it really is.</p>
+    <p>So this was never really a $67 decision. It is a library you will reach for every week for the rest of your time online, that pays for itself the very first time you put it to work, and keeps paying every time after that.</p>
+    <div class="lf-cta">
+      <a href="#" class="btn btn-lg">YES! Add to my order ($67) →</a>
+      <span class="guarline">Make your $67 back in 30 days or a full refund</span>
+    </div>
+  </div>
+</div></section>
+
+<!-- 10. GUARANTEE (above the value stack) -->
+<section class="sec-warm"><div class="container">
+  <div class="guar-card reveal">
+    <div class="guar-shield"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#bf0fc9"/><stop offset="1" stop-color="#eb1b9f"/></linearGradient></defs><path d="M50 5 L88 18 L88 50 Q88 78 50 95 Q12 78 12 50 L12 18 Z" fill="url(#sg)"/><path d="M30 50 L45 65 L72 38" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <div class="guar-body">
+      <span class="eyebrow">Risk free</span>
+      <h2>Make your $67 back in 30 days, or a full refund</h2>
+      <p>Add the bundle, put the templates to work, and if it has not more than paid for itself in 30 days, just email us and we will refund every cent.</p>
+      <ul class="guar-checks"><li>30 days, no questions asked</li><li>Full $67 refunded</li><li>One email or one click</li><li>Keep every asset you made</li></ul>
+    </div>
+  </div>
+</div></section>
+
+<!-- 11. RECAP / VALUE STACK (dark, full width, one line per item) -->
 <section class="sec-dark"><div class="container">
   <div class="head"><span class="eyebrow" style="color:var(--brand-light)">Recap</span><h2>Everything in the bundle</h2></div>
   <div class="recap reveal">
@@ -417,20 +554,7 @@ footer{background:#100920;color:#9a8fae;padding:30px 0;text-align:center;font-si
   </div>
 </div></section>
 
-<!-- 12. GUARANTEE -->
-<section class="sec-warm"><div class="container">
-  <div class="guar-card reveal">
-    <div class="guar-shield"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#bf0fc9"/><stop offset="1" stop-color="#eb1b9f"/></linearGradient></defs><path d="M50 5 L88 18 L88 50 Q88 78 50 95 Q12 78 12 50 L12 18 Z" fill="url(#sg)"/><path d="M30 50 L45 65 L72 38" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-    <div class="guar-body">
-      <span class="eyebrow">Risk free</span>
-      <h2>Make your $67 back in 30 days, or a full refund</h2>
-      <p>Add the bundle, put the templates to work, and if it has not more than paid for itself in 30 days, just email us and we will refund every cent.</p>
-      <ul class="guar-checks"><li>30 days, no questions asked</li><li>Full $67 refunded</li><li>One email or one click</li><li>Keep every asset you made</li></ul>
-    </div>
-  </div>
-</div></section>
-
-<!-- 13. FAQ -->
+<!-- 12. FAQ -->
 <section><div class="container">
   <div class="head"><span class="eyebrow">Questions</span><h2>Good to know</h2></div>
   <div class="faq">
@@ -443,22 +567,20 @@ footer{background:#100920;color:#9a8fae;padding:30px 0;text-align:center;font-si
   </div>
 </div></section>
 
-<!-- 14. RED CAUTION BANNER -->
+<!-- 13. RED CAUTION BANNER -->
 <div class="alarm red big"><h2>⏰ Caution: this offer ends the moment you leave this page ⏰</h2></div>
 
-<!-- 15. FINAL CLOSE (boxshot on black) -->
+<!-- 14. FINAL CLOSE (boxshot on black) -->
 <section class="boxshot black"><div class="container">
   <div class="boxshot-card reveal">
     <div class="bs-ribbon"><span class="rib-full">Last chance, add all 920 templates &amp; presets before you start</span><span class="rib-short">Last chance to add it</span></div>
     <div class="boxshot-grid">
       <div class="boxshot-image">
-        <div class="bs-pic"><img src="assets/cat/thumbnails.jpeg" width="820" height="612" loading="lazy" decoding="async" alt="Premium templates in The 920 Bundle"></div>
+        <div class="bs-pic"><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/thumbnails.jpeg" width="820" height="612" loading="lazy" decoding="async" alt="Premium templates in The 920 Bundle"></div>
         <ul class="bs-ticks">
-          <li>Photoshoot scenes</li><li>Business cards</li>
-          <li>Banners</li><li>Headshot ads</li>
-          <li>YouTube thumbs</li><li>Quote cards</li>
-          <li>Story templates</li><li>Call backgrounds</li>
-          <li>Mockups</li><li>Fun styles</li>
+          <li>Photoshoot scenes <span class="ct">+390</span></li><li>Business cards <span class="ct">+111</span></li><li>Banners <span class="ct">+80</span></li>
+          <li>Headshot ads <span class="ct">+62</span></li><li>YouTube thumbs <span class="ct">+62</span></li><li>Quote cards <span class="ct">+62</span></li>
+          <li>Story templates <span class="ct">+62</span></li><li>Call backgrounds <span class="ct">+52</span></li><li>Mockups <span class="ct">+34</span></li>
         </ul>
       </div>
       <div class="boxshot-content">
