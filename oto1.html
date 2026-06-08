@@ -193,11 +193,12 @@ footer{background:#1001,000;color:#9a8fae;padding:30px 0;text-align:center;font-
 .credits{background:var(--grad);color:#fff;text-align:center}
 .credits .eyebrow{color:rgba(255,255,255,.9)}.credits h2{color:#fff}
 .credits p{color:rgba(255,255,255,.95);max-width:680px;margin:0 auto;font-size:1.1rem}
-.credit-stats{display:flex;flex-wrap:wrap;justify-content:center;gap:18px;margin-top:38px}
-.credit-stats .cs{background:#15101f;border:1px solid rgba(255,255,255,.12);border-radius:var(--radius-lg);padding:26px 34px;min-width:210px;box-shadow:0 16px 38px rgba(0,0,0,.28)}
-.credit-stats .cs b{display:block;font-family:'Lexend';font-weight:900;font-size:clamp(2.6rem,5vw,3.4rem);line-height:1;color:#fff}
-.credit-stats .cs span{display:block;margin-top:8px;font-size:.94rem;color:rgba(255,255,255,.92);font-weight:600}
-@media(max-width:640px){.credit-stats .cs{min-width:0;flex:1 1 100%}}
+.credit-row{display:flex;align-items:center;justify-content:center;gap:46px;max-width:860px;margin:34px auto 0;text-align:left}
+.credit-box{flex:0 0 auto;display:block;width:236px;max-width:100%;height:auto;filter:drop-shadow(0 24px 48px rgba(0,0,0,.40))}
+.credit-ticks{flex:1 1 330px;min-width:0;list-style:none;display:grid;gap:15px;margin:0;padding:0}
+.credit-ticks li{display:flex;gap:13px;align-items:flex-start;font-size:1.06rem;font-weight:600;color:#fff;line-height:1.42}
+.credit-ticks li::before{content:'✓';flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:#fff;color:var(--brand-deep);font-weight:900;font-size:.86rem;display:flex;align-items:center;justify-content:center;margin-top:1px}
+@media(max-width:720px){.credit-row{flex-direction:column;gap:24px}.credit-box{width:196px}.credit-ticks{flex:1 1 auto;width:100%}}
 
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s cubic-bezier(.2,.6,.2,1),transform .6s cubic-bezier(.2,.6,.2,1)}
 .reveal.in{opacity:1;transform:none}
@@ -257,7 +258,7 @@ footer{background:#1001,000;color:#9a8fae;padding:30px 0;text-align:center;font-
     <div class="bs-ribbon"><span class="rib-full">Add it to your order in one click, available on this page only</span><span class="rib-short">One click to add it</span></div>
     <div class="boxshot-grid">
       <div class="boxshot-image">
-        <div class="bs-pic"><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/quotes.webp" width="820" height="612" loading="lazy" decoding="async" alt="Premium templates in The 1,000 Bundle"></div>
+        <div class="bs-pic"><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/oto-bundle-collage.webp" width="820" height="612" loading="lazy" decoding="async" alt="Premium templates in The 1,000 Bundle"></div>
         <ul class="bs-ticks">
           <li>Photoshoot scenes</li><li>Business cards</li><li>Banners</li>
           <li>Headshot ads</li><li>YouTube thumbs</li><li>Quote cards</li>
@@ -283,10 +284,14 @@ footer{background:#1001,000;color:#9a8fae;padding:30px 0;text-align:center;font-
   <span class="eyebrow">Free bonus</span>
   <h2>As a free bonus, you also get $67 of AI credits</h2>
   <p>On top of the 1,000 templates and presets, we drop <strong>1,500 AI credits</strong> straight into your account, valued at $67 and enough to generate around 500 assets. The upgrade pays for itself the moment you add it.</p>
-  <div class="credit-stats">
-    <div class="cs"><b>$67</b><span>in free AI credits, included</span></div>
-    <div class="cs"><b>~500</b><span>assets you can generate</span></div>
-    <div class="cs"><b>$0</b><span>net cost, it pays for itself</span></div>
+  <div class="credit-row">
+    <img class="credit-box" src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/creditbox67.webp" width="236" height="316" loading="lazy" decoding="async" alt="A free $67 box of AI credits, included with the bundle">
+    <ul class="credit-ticks">
+      <li>$67 of AI credits, included free</li>
+      <li>1,500 credits dropped straight into your account</li>
+      <li>Enough to generate around 500 assets</li>
+      <li>$0 net cost, the upgrade pays for itself</li>
+    </ul>
   </div>
 </div></section>
 
@@ -312,15 +317,15 @@ footer{background:#1001,000;color:#9a8fae;padding:30px 0;text-align:center;font-
   </div>
 
   <div class="ggrid">
-    <div class="gcard reveal"><div class="gimg"><span class="gcount">433</span><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/photoshoot.webp" width="820" height="612" loading="lazy" decoding="async" alt="Photoshoot scenes and presets"></div><div class="gbody"><h4><span class="grad-text">433</span> Photoshoot scenes &amp; presets</h4><p class="gstyles">Studio-quality shots for your site, socials and press kit, no camera needed. Batch 30 at once.</p></div></div>
-    <div class="gcard reveal"><div class="gimg"><span class="gcount">120</span><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/cards.webp" width="820" height="612" loading="lazy" decoding="async" alt="Business card templates"></div><div class="gbody"><h4><span class="grad-text">120</span> Business card templates</h4><p class="gstyles">Polished, print-ready cards to hand out, email, or drop on your website.</p></div></div>
-    <div class="gcard reveal"><div class="gimg"><span class="gcount">80</span><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/banners.webp" width="820" height="612" loading="lazy" decoding="async" alt="Banner and header templates"></div><div class="gbody"><h4><span class="grad-text">80</span> Banner &amp; header templates</h4><p class="gstyles">LinkedIn, X, Facebook and website header layouts, every one matched to your brand.</p></div></div>
-    <div class="gcard reveal"><div class="gimg"><span class="gcount">70</span><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/ads.webp" width="820" height="612" loading="lazy" decoding="async" alt="Headshot ad templates"></div><div class="gbody"><h4><span class="grad-text">70</span> Headshot ad templates</h4><p class="gstyles">Scroll-stopping ad creative with your face, ready to run today.</p></div></div>
-    <div class="gcard reveal"><div class="gimg"><span class="gcount">70</span><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/thumbnails.webp" width="820" height="612" loading="lazy" decoding="async" alt="YouTube thumbnail templates"></div><div class="gbody"><h4><span class="grad-text">70</span> YouTube thumbnail templates</h4><p class="gstyles">Click-worthy thumbnails with you in them, done in minutes not hours.</p></div></div>
-    <div class="gcard reveal"><div class="gimg"><span class="gcount">70</span><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/quotes.webp" width="820" height="612" loading="lazy" decoding="async" alt="Quote card templates"></div><div class="gbody"><h4><span class="grad-text">70</span> Quote card templates</h4><p class="gstyles">Turn your best lines into share-ready posts that look designed.</p></div></div>
-    <div class="gcard reveal"><div class="gimg"><span class="gcount">70</span><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/social.webp" width="820" height="612" loading="lazy" decoding="async" alt="Story templates"></div><div class="gbody"><h4><span class="grad-text">70</span> Story templates</h4><p class="gstyles">On-brand vertical stories for Instagram, TikTok and LinkedIn.</p></div></div>
-    <div class="gcard reveal"><div class="gimg"><span class="gcount">60</span><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/zoom.webp" width="820" height="612" loading="lazy" decoding="async" alt="Call background templates"></div><div class="gbody"><h4><span class="grad-text">60</span> Call background templates</h4><p class="gstyles">A clean, branded backdrop for every Zoom, webinar and recorded call.</p></div></div>
-    <div class="gcard reveal"><div class="gimg"><span class="gcount">40</span><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/mockups.webp" width="820" height="612" loading="lazy" decoding="async" alt="Mockup templates"></div><div class="gbody"><h4><span class="grad-text">40</span> Mockup templates</h4><p class="gstyles">Put yourself on covers, mugs, tees and cards people screenshot.</p></div></div>
+    <div class="gcard reveal"><div class="gimg"><span class="gcount">433</span><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/oto-photoshoot.webp" width="820" height="612" loading="lazy" decoding="async" alt="Photoshoot scenes and presets"></div><div class="gbody"><h4><span class="grad-text">433</span> Photoshoot scenes &amp; presets</h4><p class="gstyles">Studio-quality shots for your site, socials and press kit, no camera needed. Batch 30 at once.</p></div></div>
+    <div class="gcard reveal"><div class="gimg"><span class="gcount">120</span><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/oto-cards.webp" width="820" height="612" loading="lazy" decoding="async" alt="Business card templates"></div><div class="gbody"><h4><span class="grad-text">120</span> Business card templates</h4><p class="gstyles">Polished, print-ready cards to hand out, email, or drop on your website.</p></div></div>
+    <div class="gcard reveal"><div class="gimg"><span class="gcount">80</span><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/oto-banners.webp" width="820" height="612" loading="lazy" decoding="async" alt="Banner and header templates"></div><div class="gbody"><h4><span class="grad-text">80</span> Banner &amp; header templates</h4><p class="gstyles">LinkedIn, X, Facebook and website header layouts, every one matched to your brand.</p></div></div>
+    <div class="gcard reveal"><div class="gimg"><span class="gcount">70</span><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/oto-ads.webp" width="820" height="612" loading="lazy" decoding="async" alt="Headshot ad templates"></div><div class="gbody"><h4><span class="grad-text">70</span> Headshot ad templates</h4><p class="gstyles">Scroll-stopping ad creative with your face, ready to run today.</p></div></div>
+    <div class="gcard reveal"><div class="gimg"><span class="gcount">70</span><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/oto-thumbnails.webp" width="820" height="612" loading="lazy" decoding="async" alt="YouTube thumbnail templates"></div><div class="gbody"><h4><span class="grad-text">70</span> YouTube thumbnail templates</h4><p class="gstyles">Click-worthy thumbnails with you in them, done in minutes not hours.</p></div></div>
+    <div class="gcard reveal"><div class="gimg"><span class="gcount">70</span><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/oto-quotes.webp" width="820" height="612" loading="lazy" decoding="async" alt="Quote card templates"></div><div class="gbody"><h4><span class="grad-text">70</span> Quote card templates</h4><p class="gstyles">Turn your best lines into share-ready posts that look designed.</p></div></div>
+    <div class="gcard reveal"><div class="gimg"><span class="gcount">70</span><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/oto-stories.webp" width="820" height="612" loading="lazy" decoding="async" alt="Story templates"></div><div class="gbody"><h4><span class="grad-text">70</span> Story templates</h4><p class="gstyles">On-brand vertical stories for Instagram, TikTok and LinkedIn.</p></div></div>
+    <div class="gcard reveal"><div class="gimg"><span class="gcount">60</span><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/oto-callbg.webp" width="820" height="612" loading="lazy" decoding="async" alt="Call background templates"></div><div class="gbody"><h4><span class="grad-text">60</span> Call background templates</h4><p class="gstyles">A clean, branded backdrop for every Zoom, webinar and recorded call.</p></div></div>
+    <div class="gcard reveal"><div class="gimg"><span class="gcount">40</span><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/oto-mockups.webp" width="820" height="612" loading="lazy" decoding="async" alt="Mockup templates"></div><div class="gbody"><h4><span class="grad-text">40</span> Mockup templates</h4><p class="gstyles">Put yourself on covers, mugs, tees and cards people screenshot.</p></div></div>
   </div>
   <div class="sum-total"><span class="grad-text">1,000+ templates &amp; presets</span>, plus 1,500 AI credits, yours for life</div>
 </div></section>
@@ -340,7 +345,7 @@ footer{background:#1001,000;color:#9a8fae;padding:30px 0;text-align:center;font-
         <li><span class="tk">✓</span>One real photoshoot costs $1,000 plus, you get unlimited scenes for life</li>
       </ul>
     </div>
-    <div class="cr-media"><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/photoshoot.webp" width="820" height="612" loading="lazy" decoding="async" alt="Photoshoot scenes inside the Studio"></div>
+    <div class="cr-media"><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/oto-photoshoot.webp" width="820" height="612" loading="lazy" decoding="async" alt="Photoshoot scenes inside the Studio"></div>
   </div>
 
   <div class="crow flip">
@@ -354,7 +359,7 @@ footer{background:#1001,000;color:#9a8fae;padding:30px 0;text-align:center;font-
         <li><span class="tk">✓</span>Designers charge $50 to $150 a card, make one for every client you onboard</li>
       </ul>
     </div>
-    <div class="cr-media"><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/cards.webp" width="820" height="612" loading="lazy" decoding="async" alt="Business card templates inside the Studio"></div>
+    <div class="cr-media"><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/oto-cards.webp" width="820" height="612" loading="lazy" decoding="async" alt="Business card templates inside the Studio"></div>
   </div>
 
   <div class="crow">
@@ -368,7 +373,7 @@ footer{background:#1001,000;color:#9a8fae;padding:30px 0;text-align:center;font-
         <li><span class="tk">✓</span>One LinkedIn banner sells for $30 to $80 on Fiverr, you get them all for life</li>
       </ul>
     </div>
-    <div class="cr-media"><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/banners.webp" width="820" height="612" loading="lazy" decoding="async" alt="Banner and header templates inside the Studio"></div>
+    <div class="cr-media"><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/oto-banners.webp" width="820" height="612" loading="lazy" decoding="async" alt="Banner and header templates inside the Studio"></div>
   </div>
 
   <div class="crow flip">
@@ -382,7 +387,7 @@ footer{background:#1001,000;color:#9a8fae;padding:30px 0;text-align:center;font-
         <li><span class="tk">✓</span>Sell ad creative to clients for $50 to $200 a set</li>
       </ul>
     </div>
-    <div class="cr-media"><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/ads.webp" width="820" height="612" loading="lazy" decoding="async" alt="Headshot ad templates inside the Studio"></div>
+    <div class="cr-media"><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/oto-ads.webp" width="820" height="612" loading="lazy" decoding="async" alt="Headshot ad templates inside the Studio"></div>
   </div>
 
   <div class="crow">
@@ -396,7 +401,7 @@ footer{background:#1001,000;color:#9a8fae;padding:30px 0;text-align:center;font-
         <li><span class="tk">✓</span>Thumbnail designers charge $20 to $50 each, you never pay again</li>
       </ul>
     </div>
-    <div class="cr-media"><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/thumbnails.webp" width="820" height="612" loading="lazy" decoding="async" alt="YouTube thumbnail templates inside the Studio"></div>
+    <div class="cr-media"><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/oto-thumbnails.webp" width="820" height="612" loading="lazy" decoding="async" alt="YouTube thumbnail templates inside the Studio"></div>
   </div>
 
   <div class="crow flip">
@@ -410,7 +415,7 @@ footer{background:#1001,000;color:#9a8fae;padding:30px 0;text-align:center;font-
         <li><span class="tk">✓</span>Fill a month of content in an afternoon, or run a client's whole feed</li>
       </ul>
     </div>
-    <div class="cr-media"><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/quotes.webp" width="820" height="612" loading="lazy" decoding="async" alt="Quote card templates inside the Studio"></div>
+    <div class="cr-media"><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/oto-quotes.webp" width="820" height="612" loading="lazy" decoding="async" alt="Quote card templates inside the Studio"></div>
   </div>
 
   <div class="crow">
@@ -424,7 +429,7 @@ footer{background:#1001,000;color:#9a8fae;padding:30px 0;text-align:center;font-
         <li><span class="tk">✓</span>Batch a week of stories in minutes, for you or for clients</li>
       </ul>
     </div>
-    <div class="cr-media"><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/social.webp" width="820" height="612" loading="lazy" decoding="async" alt="Story templates inside the Studio"></div>
+    <div class="cr-media"><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/oto-stories.webp" width="820" height="612" loading="lazy" decoding="async" alt="Story templates inside the Studio"></div>
   </div>
 
   <div class="crow flip">
@@ -438,7 +443,7 @@ footer{background:#1001,000;color:#9a8fae;padding:30px 0;text-align:center;font-
         <li><span class="tk">✓</span>Look like a pro instead of showing your messy room</li>
       </ul>
     </div>
-    <div class="cr-media"><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/zoom.webp" width="820" height="612" loading="lazy" decoding="async" alt="Call background templates inside the Studio"></div>
+    <div class="cr-media"><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/oto-callbg.webp" width="820" height="612" loading="lazy" decoding="async" alt="Call background templates inside the Studio"></div>
   </div>
 
   <div class="crow">
@@ -452,7 +457,7 @@ footer{background:#1001,000;color:#9a8fae;padding:30px 0;text-align:center;font-
         <li><span class="tk">✓</span>Instant merch and PR mockups a brand would pay hundreds to produce</li>
       </ul>
     </div>
-    <div class="cr-media"><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/mockups.webp" width="820" height="612" loading="lazy" decoding="async" alt="Mockup templates inside the Studio"></div>
+    <div class="cr-media"><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/oto-mockups.webp" width="820" height="612" loading="lazy" decoding="async" alt="Mockup templates inside the Studio"></div>
   </div>
 </div></section>
 
@@ -461,10 +466,14 @@ footer{background:#1001,000;color:#9a8fae;padding:30px 0;text-align:center;font-
   <span class="eyebrow">It pays for itself</span>
   <h2>Your $67 comes straight back in credits</h2>
   <p>The bundle also drops <strong>1,500 AI credits</strong> into your account, valued at $67 and enough to generate around 500 assets. So the moment you add it, the upgrade has paid for itself, and all 1,000-plus templates and presets are the part you keep on top, for life.</p>
-  <div class="credit-stats">
-    <div class="cs"><b>$67</b><span>in free AI credits, included</span></div>
-    <div class="cs"><b>~500</b><span>assets you can generate</span></div>
-    <div class="cs"><b>$0</b><span>net cost, it pays for itself</span></div>
+  <div class="credit-row">
+    <img class="credit-box" src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/creditbox67.webp" width="236" height="316" loading="lazy" decoding="async" alt="A free $67 box of AI credits, included with the bundle">
+    <ul class="credit-ticks">
+      <li>$67 of AI credits, included free</li>
+      <li>1,500 credits dropped straight into your account</li>
+      <li>Enough to generate around 500 assets</li>
+      <li>$0 net cost, the upgrade pays for itself</li>
+    </ul>
   </div>
 </div></section>
 
@@ -502,15 +511,15 @@ footer{background:#1001,000;color:#9a8fae;padding:30px 0;text-align:center;font-
 <section class="sec-dark"><div class="container">
   <div class="head"><span class="eyebrow" style="color:var(--brand-light)">Recap</span><h2>Everything in the bundle</h2></div>
   <div class="collage reveal">
-    <img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/photoshoot.webp" loading="lazy" decoding="async" alt="">
-    <img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/cards.webp" loading="lazy" decoding="async" alt="">
-    <img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/banners.webp" loading="lazy" decoding="async" alt="">
-    <img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/ads.webp" loading="lazy" decoding="async" alt="">
-    <img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/thumbnails.webp" loading="lazy" decoding="async" alt="">
-    <img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/quotes.webp" loading="lazy" decoding="async" alt="">
-    <img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/social.webp" loading="lazy" decoding="async" alt="">
-    <img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/zoom.webp" loading="lazy" decoding="async" alt="">
-    <img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/mockups.webp" loading="lazy" decoding="async" alt="">
+    <img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/oto-photoshoot.webp" loading="lazy" decoding="async" alt="">
+    <img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/oto-cards.webp" loading="lazy" decoding="async" alt="">
+    <img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/oto-banners.webp" loading="lazy" decoding="async" alt="">
+    <img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/oto-ads.webp" loading="lazy" decoding="async" alt="">
+    <img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/oto-thumbnails.webp" loading="lazy" decoding="async" alt="">
+    <img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/oto-quotes.webp" loading="lazy" decoding="async" alt="">
+    <img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/oto-stories.webp" loading="lazy" decoding="async" alt="">
+    <img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/oto-callbg.webp" loading="lazy" decoding="async" alt="">
+    <img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/oto-mockups.webp" loading="lazy" decoding="async" alt="">
   </div>
   <div class="recap reveal">
     <div class="recap-head"><span>What you add today</span><span>Value</span></div>
@@ -558,7 +567,7 @@ footer{background:#1001,000;color:#9a8fae;padding:30px 0;text-align:center;font-
     <div class="bs-ribbon"><span class="rib-full">Last chance, add all 1,000-plus templates &amp; presets before you start</span><span class="rib-short">Last chance to add it</span></div>
     <div class="boxshot-grid">
       <div class="boxshot-image">
-        <div class="bs-pic"><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/thumbnails.webp" width="820" height="612" loading="lazy" decoding="async" alt="Premium templates in The 1,000 Bundle"></div>
+        <div class="bs-pic"><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/cat/oto-thumbnails.webp" width="820" height="612" loading="lazy" decoding="async" alt="Premium templates in The 1,000 Bundle"></div>
         <ul class="bs-ticks">
           <li>Photoshoot scenes</li><li>Business cards</li><li>Banners</li>
           <li>Headshot ads</li><li>YouTube thumbs</li><li>Quote cards</li>
