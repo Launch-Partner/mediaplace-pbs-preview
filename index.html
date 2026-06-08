@@ -86,7 +86,7 @@ section{padding:74px 0}
 
 /* Offer banner (boxshot card on a dark contrasting band) */
 .boxshot{background:radial-gradient(ellipse 900px 520px at 50% 18%,rgba(203,26,235,.26),transparent 60%),radial-gradient(circle 520px at 82% 80%,rgba(245,42,147,.18),transparent 55%),var(--bg-dark);padding:66px 0}
-.boxshot-card{position:relative;max-width:1040px;margin:0 auto;background:linear-gradient(180deg,#f7ecfd 0%,#fde7f3 100%);border:1px solid #ecd3f7;border-radius:24px;padding:48px 44px 38px;box-shadow:0 20px 48px -12px rgba(203,26,235,.2)}
+.boxshot-card{position:relative;max-width:1040px;margin:0 auto;background:linear-gradient(180deg,#f7ecfd 0%,#fde7f3 100%);border:1px solid #ecd3f7;border-radius:24px;padding:48px 44px 38px;box-shadow:0 20px 48px -12px rgba(203,26,235,.2);color:var(--text)}
 .bs-ribbon{position:absolute;top:-18px;left:50%;transform:translateX(-50%);background:var(--grad);color:#fff;padding:10px 26px;border-radius:100px;font-family:'Lexend';font-weight:800;font-size:.84rem;white-space:nowrap;box-shadow:0 8px 22px var(--brand-glow);max-width:92%}
 @media(max-width:880px){.boxshot-card{padding:46px 22px 32px;border-radius:20px}.bs-ribbon{font-size:.72rem;white-space:normal;text-align:center;line-height:1.3;max-width:90%;top:-24px;padding:8px 16px}}
 .boxshot-grid{display:grid;grid-template-columns:1fr 1fr;gap:38px;align-items:center}
@@ -182,6 +182,17 @@ section{padding:74px 0}
 .cr-media{border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border);box-shadow:0 20px 48px rgba(203,26,235,.16)}
 .cr-media img{width:100%;display:block}
 
+/* Credits "pays for itself" band */
+.credits{background:var(--grad);color:#fff;text-align:center}
+.credits .eyebrow{color:rgba(255,255,255,.9)}
+.credits h2{color:#fff}
+.credits p{color:rgba(255,255,255,.95);max-width:660px;margin:0 auto;font-size:1.1rem}
+.credit-stats{display:flex;justify-content:center;flex-wrap:wrap;gap:18px;margin-top:38px}
+.credit-stats .cs{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:var(--radius-lg);padding:24px 34px;min-width:200px}
+.credit-stats .cs b{display:block;font-family:'Lexend';font-weight:900;font-size:clamp(2.4rem,5vw,3.2rem);line-height:1;color:#fff}
+.credit-stats .cs span{display:block;margin-top:8px;font-size:.94rem;color:rgba(255,255,255,.92);font-weight:600}
+@media(max-width:640px){.credit-stats .cs{min-width:0;flex:1 1 100%}}
+
 /* Guarantee (shield) */
 .guar-card{position:relative;overflow:hidden;display:grid;grid-template-columns:auto 1fr;gap:44px;align-items:center;max-width:1040px;margin:0 auto;background:linear-gradient(135deg,#fbeefb 0%,#fdeef6 100%);border:2px solid var(--brand-light);border-radius:var(--radius-lg);padding:clamp(36px,5vw,56px);box-shadow:0 24px 60px rgba(203,26,235,.12)}
 .guar-card::after{content:'✓';position:absolute;bottom:-54px;right:8%;font-family:'Lexend';font-weight:900;font-size:17rem;color:var(--brand);opacity:.05;line-height:1;pointer-events:none}
@@ -255,7 +266,7 @@ footer{background:#100920;color:#9a8fae;padding:30px 0;text-align:center;font-si
       <span class="badge badge-new">✦ New inside MediaPlace · 72 hour launch</span>
     </div>
     <h1>Your entire personal brand,<br><span class="grad-text">built from one photo.</span></h1>
-    <p class="hero-sub">Unlock the new AI Personal Brand Studio inside MediaPlace. One selfie, or a single link, builds your whole personal brand in 4K, ready for every platform.</p>
+    <p class="hero-sub">Unlock the new AI Personal Brand Studio inside MediaPlace. One selfie, or a single link, and it builds your whole personal brand for every platform in 4K, in just one click.</p>
     <a href="#pricing" class="btn-primary">YES! Unlock the Studio for $47 →</a>
     <div class="cta-sub">30 day money back guarantee.</div>
     <div class="hero-ticks">
@@ -285,7 +296,7 @@ footer{background:#100920;color:#9a8fae;padding:30px 0;text-align:center;font-si
           </ul>
         </div>
         <div class="boxshot-content">
-          <div class="bs-product-name">The AI Personal<br>Brand Studio</div>
+          <div class="bs-product-name">The AI Personal Brand<br>Studio Upgrade</div>
           <div class="bs-price-stack"><div class="bs-value">Total value: <strong>$663</strong></div><div class="bs-anchor">Usually $197</div></div>
           <div class="bs-deal-label">Launch deal, 72 hours only:</div>
           <div class="bs-price"><span class="bs-price-num">$47</span><span class="bs-price-sub">One payment<br>Lifetime access</span></div>
@@ -386,7 +397,7 @@ footer{background:#100920;color:#9a8fae;padding:30px 0;text-align:center;font-si
   <div class="container">
     <div class="head">
       <span class="eyebrow">Why members love it</span>
-      <h2>Three things that make this a no brainer</h2>
+      <h2>Three powerful things that make this a no-brainer</h2>
     </div>
     <div class="crow">
       <div class="cr-text">
@@ -411,6 +422,20 @@ footer{background:#100920;color:#9a8fae;padding:30px 0;text-align:center;font-si
         <p>No good photo handy? Drop in your website, LinkedIn or X and the Studio pulls your image, your brand colors and your style automatically. It builds the whole thing around you with almost no effort.</p>
       </div>
       <div class="cr-media"><img src="assets/cat/lifestyle.jpeg" alt="Paste a link and the Studio builds around you"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 9.5 CREDITS PAYS FOR ITSELF -->
+<section class="credits">
+  <div class="container">
+    <span class="eyebrow">It pays for itself</span>
+    <h2>You also get $47 of AI credits, on us</h2>
+    <p>Unlock the Studio for $47 and we hand you $47 of AI credits straight back, free. That is enough to generate up to 250 personal branding assets, so your upgrade pays for itself the moment you start creating.</p>
+    <div class="credit-stats">
+      <div class="cs"><b>$47</b><span>in free AI credits, included</span></div>
+      <div class="cs"><b>~250</b><span>assets you can generate</span></div>
+      <div class="cs"><b>$0</b><span>extra to get started</span></div>
     </div>
   </div>
 </section>
@@ -503,7 +528,7 @@ footer{background:#100920;color:#9a8fae;padding:30px 0;text-align:center;font-si
 <!-- 13. FINAL OFFER BANNER -->
 <section class="final">
   <div class="container">
-    <h2 style="text-align:center;margin-bottom:36px">Unlock your entire personal brand today</h2>
+    <h2 style="text-align:center;margin-bottom:60px">Unlock your entire personal brand today</h2>
     <div class="boxshot-card">
       <div class="bs-ribbon">Unlock your entire personal brand for one payment, no subscription</div>
       <div class="boxshot-grid">
@@ -517,7 +542,7 @@ footer{background:#100920;color:#9a8fae;padding:30px 0;text-align:center;font-si
           </ul>
         </div>
         <div class="boxshot-content">
-          <div class="bs-product-name">The AI Personal<br>Brand Studio</div>
+          <div class="bs-product-name">The AI Personal Brand<br>Studio Upgrade</div>
           <div class="bs-price-stack"><div class="bs-value">Total value: <strong>$663</strong></div><div class="bs-anchor">Usually $197</div></div>
           <div class="bs-deal-label">Launch deal, 72 hours only:</div>
           <div class="bs-price"><span class="bs-price-num">$47</span><span class="bs-price-sub">One payment<br>Lifetime access</span></div>
