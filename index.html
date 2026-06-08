@@ -631,13 +631,12 @@ document.querySelectorAll('.faq-q').forEach(function(b){
   });
 });
 (function(){
-  var KEY='mp_pbs_launch_end';
-  var end=localStorage.getItem(KEY);
-  if(!end){end=Date.now()+72*3600*1000;localStorage.setItem(KEY,end)}
-  end=parseInt(end,10);
+  /* Launch window: Wed Jun 10 2026 10am ET -> closes Sat Jun 13 2026 10am ET (72h). 14:00 UTC = 10am EDT. Thomas: adjust this one timestamp if the launch date moves. */
+  var end=Date.UTC(2026,5,13,14,0,0);
   var el=document.getElementById('cd');
   function tick(){
-    var s=Math.max(0,Math.floor((end-Date.now())/1000));
+    var s=Math.floor((end-Date.now())/1000);
+    if(s<=0){var c=el&&el.closest('.tb-count');if(c)c.style.display='none';return}
     var h=String(Math.floor(s/3600)).padStart(2,'0');
     var m=String(Math.floor(s%3600/60)).padStart(2,'0');
     var ss=String(s%60).padStart(2,'0');
