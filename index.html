@@ -147,8 +147,8 @@ section{padding:74px 0}
 @media(max-width:520px){.grid9{grid-template-columns:1fr}}
 .gcard{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;transition:transform .18s ease,box-shadow .18s ease}
 .gcard:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(203,26,235,.12)}
-.gcard .gimg{aspect-ratio:4/3;background:linear-gradient(135deg,#f3e3fb,#fde3f0);display:flex;align-items:center;justify-content:center;font-size:2.2rem;overflow:hidden}
-.gcard .gimg img{width:100%;height:100%;object-fit:cover}
+.gcard .gimg{position:relative;aspect-ratio:4/3;background:linear-gradient(135deg,#f3e3fb,#fde3f0);display:flex;align-items:center;justify-content:center;font-size:2.2rem;overflow:hidden}
+.gcard .gimg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .gcard .gbody{padding:18px 20px}
 .gcard h4{font-size:1.05rem;margin-bottom:3px;color:var(--text)}
 .gcard p{font-size:.88rem;color:var(--text-mute)}
