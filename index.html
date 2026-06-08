@@ -170,7 +170,8 @@ section{padding:74px 0}
 @media(max-width:760px){.steps{grid-template-columns:1fr}}
 .step{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;display:flex;flex-direction:column;box-shadow:0 10px 28px rgba(191,15,201,.07)}
 .step .si{aspect-ratio:16/10;background:linear-gradient(135deg,rgba(203,26,235,.34),rgba(245,42,147,.3));display:flex;align-items:center;justify-content:center;font-size:2.6rem;position:relative}
-.step .si .n{position:absolute;top:12px;left:12px;width:34px;height:34px;border-radius:9px;background:#fff;color:var(--brand-deep);display:flex;align-items:center;justify-content:center;font-weight:800}
+.step .si img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.step .si .n{z-index:2;position:absolute;top:12px;left:12px;width:34px;height:34px;border-radius:9px;background:#fff;color:var(--brand-deep);display:flex;align-items:center;justify-content:center;font-weight:800}
 .step .sb{padding:24px 24px 28px}
 .step .sb p{font-size:.96rem}
 
@@ -183,7 +184,8 @@ section{padding:74px 0}
 .cr-text h3{margin-bottom:10px}
 .cr-text p{font-size:1.02rem}
 .cr-media{border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border);box-shadow:0 20px 48px rgba(203,26,235,.16)}
-.cr-media img{width:100%;display:block}
+.cr-media img{width:100%;height:100%;display:block;object-fit:cover}
+.cr-media{aspect-ratio:4/3}
 .cr-ph{aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;text-align:center;background:repeating-linear-gradient(135deg,#f3e3fb,#f3e3fb 14px,#efe0f7 14px,#efe0f7 28px);border:2px dashed var(--brand-light);color:var(--brand-deep);font-weight:700;font-size:.95rem;line-height:1.4;box-shadow:none}
 
 /* Credits "pays for itself" band */
@@ -200,6 +202,8 @@ section{padding:74px 0}
 .credit-voucher .cv-label{font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:#cbb9dd;font-weight:700}
 .credit-voucher .cv-amt{font-family:'Lexend';font-weight:900;font-size:clamp(2.4rem,6vw,3.4rem);color:#fff;line-height:1;margin-top:8px}
 .credit-voucher .cv-sub{color:rgba(255,255,255,.72);font-size:.9rem;margin-top:8px}
+.credit-box{display:block;margin:24px auto 0;width:300px;max-width:64%;height:auto;filter:drop-shadow(0 26px 46px rgba(0,0,0,.45))}
+.vstrip{display:block;width:100%;max-width:1040px;height:auto;margin:0 auto 26px}
 .voucher-stamp{position:absolute;top:20px;right:-52px;transform:rotate(34deg);background:linear-gradient(135deg,#16a34a,#0e8a3e);color:#fff;font-weight:900;letter-spacing:.2em;font-size:.92rem;padding:7px 64px;box-shadow:0 6px 16px rgba(0,0,0,.35)}
 
 /* Guarantee (shield) */
@@ -442,6 +446,20 @@ footer{background:#100920;color:#9a8fae;padding:30px 0;text-align:center;font-si
   </div>
 </section>
 
+<section class="credits">
+  <div class="container">
+    <span class="eyebrow">It pays for itself</span>
+    <h2>You also get $47 of AI credits, on us</h2>
+    <p>Unlock the Studio for $47 and we hand you $47 of AI credits straight back, free. That is enough to generate up to 250 personal branding assets, so your upgrade pays for itself the moment you start creating.</p>
+    <img class="credit-box" src="assets/creditbox.webp" width="300" height="424" loading="lazy" decoding="async" alt="A free $47 box of AI credits, included with your unlock">
+    <div class="credit-stats">
+      <div class="cs"><b>$47</b><span>in free AI credits, included</span></div>
+      <div class="cs"><b>~250</b><span>assets you can generate</span></div>
+      <div class="cs"><b>$0</b><span>extra to get started</span></div>
+    </div>
+  </div>
+</section>
+
 <!-- 8. HOW IT WORKS -->
 <section>
   <div class="container">
@@ -451,9 +469,9 @@ footer{background:#100920;color:#9a8fae;padding:30px 0;text-align:center;font-si
       <p>No training step, no prompts to learn, no design skills. You stay in control of every detail.</p>
     </div>
     <div class="steps">
-      <div class="step"><div class="si"><span class="n">1</span>📥</div><div class="sb"><h3>Add yourself once</h3><p>Upload one selfie, or paste your LinkedIn, X, Instagram or website link. The Studio reads your photo, your colors and what your business actually does, then pulls it all in.</p></div></div>
-      <div class="step"><div class="si"><span class="n">2</span>🎨</div><div class="sb"><h3>Pick your look</h3><p>Choose a ready made palette like Minimal, Professional or Futuristic, or keep the colors we pulled from your site. Your style flows through every asset automatically.</p></div></div>
-      <div class="step"><div class="si"><span class="n">3</span>⚡</div><div class="sb"><h3>Generate everything</h3><p>Click once and your full brand kit is created across all nine categories, in 4K, already cropped for each platform. Export the lot whenever you are ready.</p></div></div>
+      <div class="step"><div class="si"><span class="n">1</span><img src="assets/step1.webp" width="1000" height="567" loading="lazy" decoding="async" alt="Create your brand kit in MediaPlace"></div><div class="sb"><h3>Add yourself once</h3><p>Upload one selfie, or paste your LinkedIn, X, Instagram or website link. The Studio reads your photo, your colors and what your business actually does, then pulls it all in.</p></div></div>
+      <div class="step"><div class="si"><span class="n">2</span><img src="assets/step2.webp" width="1000" height="566" loading="lazy" decoding="async" alt="Add your brand details inside MediaPlace"></div><div class="sb"><h3>Add brand details</h3><p>Add your bio, company logo and brand colors, or keep the palette we pulled from your site. Your details and style flow through every asset automatically.</p></div></div>
+      <div class="step"><div class="si"><span class="n">3</span><img src="assets/step3.webp" width="1000" height="567" loading="lazy" decoding="async" alt="Generate your full asset pack"></div><div class="sb"><h3>Generate everything</h3><p>Click once and your full brand kit is created across all nine categories, in 4K, already cropped for each platform. Export the lot whenever you are ready.</p></div></div>
     </div>
   </div>
 </section>
@@ -471,7 +489,7 @@ footer{background:#100920;color:#9a8fae;padding:30px 0;text-align:center;font-si
         <h3>Unlimited brand kits</h3>
         <p>Your $47 unlock is for life, with no cap on how many brand kits you build. Make one for yourself, one for your co-founder, and a fresh one for every client you take on.</p>
       </div>
-      <div class="cr-media cr-ph"><span>Product screenshot<br>coming soon</span></div>
+      <div class="cr-media"><img src="assets/feat1.webp" width="1000" height="568" loading="lazy" decoding="async" alt="Your Brand Kits inside MediaPlace"></div>
     </div>
     <div class="crow flip">
       <div class="cr-text">
@@ -479,7 +497,7 @@ footer{background:#100920;color:#9a8fae;padding:30px 0;text-align:center;font-si
         <h3>Runs on the credits you already own</h3>
         <p>The Studio uses the same MediaPlace credits you have been buying for years, so the balance already sitting in your account works here. Generate unlimited assets from credits you already paid for.</p>
       </div>
-      <div class="cr-media cr-ph"><span>Product screenshot<br>coming soon</span></div>
+      <div class="cr-media"><img src="assets/feat2.webp" width="1000" height="502" loading="lazy" decoding="async" alt="Your existing MediaPlace credit balance"></div>
     </div>
     <div class="crow">
       <div class="cr-text">
@@ -487,7 +505,7 @@ footer{background:#100920;color:#9a8fae;padding:30px 0;text-align:center;font-si
         <h3>Just paste a link</h3>
         <p>No good photo handy? Drop in your website, LinkedIn or X and the Studio pulls your image, your brand colors and your style automatically. It builds the whole thing around you with almost no effort.</p>
       </div>
-      <div class="cr-media cr-ph"><span>Product screenshot<br>coming soon</span></div>
+      <div class="cr-media"><img src="assets/feat3.webp" width="1000" height="588" loading="lazy" decoding="async" alt="Paste your links and the Studio pulls you in"></div>
     </div>
   </div>
 </section>
@@ -498,7 +516,7 @@ footer{background:#100920;color:#9a8fae;padding:30px 0;text-align:center;font-si
     <span class="eyebrow">It pays for itself</span>
     <h2>You also get $47 of AI credits, on us</h2>
     <p>Unlock the Studio for $47 and we hand you $47 of AI credits straight back, free. That is enough to generate up to 250 personal branding assets, so your upgrade pays for itself the moment you start creating.</p>
-    <div><div class="credit-voucher"><span class="voucher-stamp">FREE</span><div class="cv-label">Included with your unlock</div><div class="cv-amt">$47 of AI credits</div><div class="cv-sub">~250 branded assets, on the house</div></div></div>
+    <img class="credit-box" src="assets/creditbox.webp" width="300" height="424" loading="lazy" decoding="async" alt="A free $47 box of AI credits, included with your unlock">
     <div class="credit-stats">
       <div class="cs"><b>$47</b><span>in free AI credits, included</span></div>
       <div class="cs"><b>~250</b><span>assets you can generate</span></div>
@@ -541,6 +559,7 @@ footer{background:#100920;color:#9a8fae;padding:30px 0;text-align:center;font-si
       <h2>Lifetime access for a single $47 payment</h2>
       <p>After launch the AI Personal Brand Studio is $197. For the next 72 hours, MediaPlace members unlock it for life for $47.</p>
     </div>
+    <img class="vstrip" src="assets/strip.webp" width="1040" height="186" loading="lazy" decoding="async" alt="A sample of the brand assets you can create">
     <div class="vstack">
       <div class="vstack-head"><span>What you unlock today</span><span>Value</span></div>
       <div class="vstack-body">
