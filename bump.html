@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order bump: +500 AI credits | MediaPlace</title>
+<meta name="theme-color" content="#bf0fc9">
+<link rel="icon" type="image/png" href="https://launch-partner.github.io/mediaplace-pbs-preview/assets/favicon.png">
+<link rel="apple-touch-icon" href="https://launch-partner.github.io/mediaplace-pbs-preview/assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --brand:#bf0fc9;--brand-deep:#9a0aa3;--accent:#eb1b9f;
+  --grad:linear-gradient(135deg,#bf0fc9 0%,#eb1b9f 100%);
+  --text:#14101c;--text-body:#4a4458;--text-mute:#7a7b7f;--success:#16a34a;
+}
+body{background:#f7f7ff;color:var(--text);font-family:'Lexend',system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased;padding:40px 18px;display:flex;justify-content:center}
+.wrap{max-width:560px;width:100%}
+.note{text-align:center;color:var(--text-mute);font-size:.82rem;margin-bottom:14px}
+
+/* the order bump */
+.bump{position:relative;background:#fff7fd;border:2px dashed var(--brand);border-radius:16px;padding:20px 22px;box-shadow:0 10px 30px rgba(191,15,201,.12)}
+.bump-tag{position:absolute;top:-12px;left:20px;background:var(--grad);color:#fff;font-weight:800;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:100px;box-shadow:0 6px 14px rgba(191,15,201,.3)}
+.bump-row{display:flex;gap:14px;align-items:flex-start}
+.bump input[type=checkbox]{appearance:none;-webkit-appearance:none;flex:0 0 auto;width:26px;height:26px;margin-top:2px;border:2px solid var(--brand);border-radius:7px;background:#fff;cursor:pointer;position:relative;transition:background .15s}
+.bump input[type=checkbox]:checked{background:var(--grad);border-color:transparent}
+.bump input[type=checkbox]:checked::after{content:'';position:absolute;left:8px;top:3px;width:7px;height:13px;border:solid #fff;border-width:0 3px 3px 0;transform:rotate(45deg)}
+.bump-body{flex:1;min-width:0}
+.bump-head{font-weight:800;font-size:1.05rem;color:var(--text);display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.bump-head .yes{color:var(--brand-deep)}
+.bump-head .price{margin-left:auto;font-weight:900;color:var(--brand-deep);white-space:nowrap}
+.bump-sub{color:var(--text-body);font-size:.92rem;margin-top:5px}
+.bump-trust{margin-top:9px;display:inline-flex;align-items:center;gap:7px;color:var(--success);font-weight:700;font-size:.82rem}
+.bump-trust::before{content:'✓';font-weight:900}
+@media(max-width:460px){.bump-head{font-size:1rem}.bump-head .price{margin-left:0;width:100%}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="note">Order-bump component, drop it in the checkout right above the Complete Order button.</div>
+
+  <label class="bump" for="bump-credits">
+    <span class="bump-tag">⚡ One-click add-on</span>
+    <div class="bump-row">
+      <input type="checkbox" id="bump-credits" checked>
+      <div class="bump-body">
+        <div class="bump-head"><span><span class="yes">YES!</span> Add 150 more branded assets</span><span class="price">+$27</span></div>
+        <div class="bump-sub">Walk in with around <strong>150 more ready-to-post assets</strong>, as <strong>500 bonus AI credits</strong> you can spend however you like. One time, added to this order.</div>
+        <div class="bump-trust">Covered by your 30-day money-back guarantee</div>
+      </div>
+    </div>
+  </label>
+</div>
+</body>
+</html>
