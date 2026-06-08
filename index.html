@@ -27,7 +27,7 @@ html{scroll-behavior:smooth}
   --max:1120px; --narrow:740px; --radius:14px; --radius-lg:20px;
 }
 body{background:var(--bg);color:var(--text);font-family:'Lexend',system-ui,-apple-system,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-img{max-width:100%;display:block}
+img{max-width:100%;height:auto;display:block}
 a{color:inherit;text-decoration:none}
 button{font:inherit;border:none;cursor:pointer}
 h1,h2,h3,h4{font-family:'Lexend',sans-serif;font-weight:800;letter-spacing:-0.025em;line-height:1.12;color:var(--text)}
@@ -45,8 +45,8 @@ section{padding:74px 0}
 .grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 
 /* Buttons */
-.btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--grad);color:#fff;border-radius:100px;padding:18px 46px;font-family:'Lexend',sans-serif;font-weight:700;font-size:1.05rem;white-space:nowrap;box-shadow:0 8px 26px var(--brand-glow);transition:transform .18s ease,box-shadow .18s ease}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 32px var(--brand-glow)}
+.btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--grad);background-size:180% 180%;background-position:left center;color:#fff;border-radius:100px;padding:18px 46px;font-family:'Lexend',sans-serif;font-weight:700;font-size:1.05rem;white-space:nowrap;box-shadow:0 8px 26px var(--brand-glow);transition:transform .2s ease,box-shadow .2s ease,background-position .55s ease}
+.btn-primary:hover{transform:translateY(-2px) scale(1.01);box-shadow:0 14px 34px var(--brand-glow);background-position:right center}
 .btn-sm{padding:11px 24px;font-size:.92rem}
 .btn-dark{background:#14101c;box-shadow:0 8px 26px rgba(0,0,0,.3)}
 .btn-dark:hover{background:#000}
@@ -82,7 +82,7 @@ section{padding:74px 0}
 .hero-ticks .tk{display:inline-flex;align-items:center;gap:8px;font-size:.95rem;font-weight:600;color:var(--text-body)}
 .hero-ticks .tk::before{content:'✓';width:20px;height:20px;border-radius:50%;background:var(--success-tint);color:var(--success);display:inline-flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:800;flex-shrink:0}
 .hero-visual{margin:30px auto 0;max-width:980px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border);box-shadow:0 30px 80px rgba(203,26,235,.14)}
-.hero-visual img{width:100%}
+.hero-visual img{width:100%;height:auto}
 
 /* Offer banner (boxshot card on a dark contrasting band) */
 .boxshot{background:radial-gradient(ellipse 900px 520px at 50% 18%,rgba(203,26,235,.26),transparent 60%),radial-gradient(circle 520px at 82% 80%,rgba(245,42,147,.18),transparent 55%),var(--bg-dark);padding:66px 0}
@@ -246,6 +246,63 @@ section{padding:74px 0}
 .final h2{color:#fff}.final p{color:#d6cfe2;max-width:560px;margin:0 auto}
 
 footer{background:#100920;color:#9a8fae;padding:30px 0;text-align:center;font-size:.84rem}
+
+/* ===== hover lifts ===== */
+.bonus,.cr-media,.pain{transition:transform .22s ease,box-shadow .22s ease}
+.bonus:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(191,15,201,.12)}
+.cr-media:hover{transform:translateY(-4px)}
+.pain:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(191,15,201,.1)}
+.boxshot-content,.cr-text,.guar-body{min-width:0}
+
+/* ===== scroll reveal ===== */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s cubic-bezier(.2,.6,.2,1),transform .6s cubic-bezier(.2,.6,.2,1)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1!important;transform:none!important;transition:none}.pulse{animation:none}}
+
+/* ===== MOBILE ===== */
+@media(max-width:768px){
+  .container{padding:0 20px}
+  .boxshot-card{padding:42px 20px 30px}
+  .guar-card{padding:34px 24px}
+  .vstack-head,.vstack-body{padding-left:22px;padding-right:22px}
+  .crow{gap:30px}
+}
+@media(max-width:600px){
+  section{padding:46px 0}
+  .container{padding:0 16px}
+  h1{font-size:2rem}
+  h2{font-size:1.55rem}
+  .hero{padding:44px 0 30px}
+  .hero h1 br{display:none}
+  .hero-sub{font-size:1.05rem}
+  .hero-ticks{gap:10px 18px}
+  .hero-ticks .tk{font-size:.9rem}
+  .btn-primary{padding:15px 22px;font-size:.97rem;max-width:100%}
+  .btn-sm{padding:9px 14px;font-size:.82rem}
+  .badge{font-size:.68rem;padding:7px 13px;letter-spacing:.03em}
+  .boxshot{padding:44px 0}
+  .bs-ribbon{font-size:.68rem;top:-14px;padding:7px 14px}
+  .bs-product-name{font-size:1.5rem}
+  .bs-price-num{font-size:3.2rem}
+  .bs-ticks{grid-template-columns:repeat(2,1fr);gap:5px 10px}
+  .bs-ticks li{font-size:.78rem}
+  .credit-stats .cs b{font-size:2.4rem}
+  .vstack-head{font-size:.68rem;letter-spacing:.08em}
+  .vrow .name{font-size:.92rem}
+  .vrow .name span{font-size:.78rem}
+  .vrow .val{font-size:.95rem}
+  .guar-body h2{font-size:1.5rem}
+  .whatif h3{font-size:1.5rem}
+  .whatif p{font-size:1rem}
+  .faq-q{font-size:1rem}
+  .head{margin-bottom:32px}
+}
+@media(max-width:430px){
+  .btn-primary{white-space:normal;line-height:1.25}
+  h1{font-size:1.78rem}
+  .bs-price-num{font-size:2.9rem}
+}
+
 </style>
 </head>
 <body>
@@ -265,17 +322,17 @@ footer{background:#100920;color:#9a8fae;padding:30px 0;text-align:center;font-si
     <div class="badge-row">
       <span class="badge badge-new">✦ New inside MediaPlace · 72 hour launch</span>
     </div>
-    <h1>Your entire personal brand,<br><span class="grad-text">built from one photo.</span></h1>
+    <h1>Your entire personal brand,<br><span class="grad-text">built from one photo</span></h1>
     <p class="hero-sub">Unlock the new AI Personal Brand Studio inside MediaPlace. One selfie, or a single link, and it builds your whole personal brand for every platform in 4K, in just one click.</p>
     <a href="#pricing" class="btn-primary">YES! Unlock the Studio for $47 →</a>
     <div class="cta-sub">30 day money back guarantee.</div>
     <div class="hero-ticks">
-      <span class="tk">Built from one selfie</span>
-      <span class="tk">Paste your website link</span>
-      <span class="tk">The same style across all assets</span>
+      <span class="tk">$47 of free AI credits</span>
+      <span class="tk">Generate up to 250 assets</span>
+      <span class="tk">A new feature inside MediaPlace</span>
     </div>
     <div class="hero-visual">
-      <img src="assets/hero-showcase.jpeg" alt="One photo turned into a full set of on-brand assets: profile picture, banner, thumbnail, quote graphic, business card and Zoom background">
+      <img src="assets/hero-showcase.jpeg" width="1600" height="893" decoding="async" fetchpriority="high" alt="One photo turned into a full set of on-brand assets: profile picture, banner, thumbnail, quote graphic, business card and Zoom background">
     </div>
   </div>
 </section>
@@ -287,7 +344,7 @@ footer{background:#100920;color:#9a8fae;padding:30px 0;text-align:center;font-si
       <div class="bs-ribbon">Unlock your entire personal brand for one payment, no subscription</div>
       <div class="boxshot-grid">
         <div class="boxshot-image">
-          <div class="bs-pic"><img src="assets/cat/social.jpeg" alt="A full personal brand kit generated inside MediaPlace"></div>
+          <div class="bs-pic"><img src="assets/cat/social.jpeg" width="820" height="612" loading="lazy" decoding="async" alt="A full personal brand kit generated inside MediaPlace"></div>
           <ul class="bs-ticks">
             <li>Profile photos</li><li>Banners</li><li>Thumbnails</li>
             <li>Quote graphics</li><li>Business cards</li><li>Zoom backgrounds</li>
@@ -353,15 +410,15 @@ footer{background:#100920;color:#9a8fae;padding:30px 0;text-align:center;font-si
       <p>One brand kit fills out your entire online presence. Nine categories of ready to post, on-brand assets, all generated from a single photo or link.</p>
     </div>
     <div class="grid9">
-      <div class="gcard"><div class="gimg"><img src="assets/cat/profile.jpeg" alt="Profile photo examples" onerror="this.replaceWith(document.createTextNode('🪪'))"></div><div class="gbody"><h4>Profile photos</h4><p>LinkedIn, YouTube, Facebook, X, Instagram, Zoom</p></div></div>
-      <div class="gcard"><div class="gimg"><img src="assets/cat/banners.jpeg" alt="Banner examples" onerror="this.replaceWith(document.createTextNode('🖼️'))"></div><div class="gbody"><h4>Banners and headers</h4><p>Cover images sized for every platform</p></div></div>
-      <div class="gcard"><div class="gimg"><img src="assets/cat/quotes.jpeg" alt="Quote graphic examples" onerror="this.replaceWith(document.createTextNode('💬'))"></div><div class="gbody"><h4>Quote graphics</h4><p>On-brand cards for posts and stories</p></div></div>
-      <div class="gcard"><div class="gimg"><img src="assets/cat/cards.jpeg" alt="Business card examples" onerror="this.replaceWith(document.createTextNode('📇'))"></div><div class="gbody"><h4>Business cards</h4><p>Print ready, matched to your brand</p></div></div>
-      <div class="gcard"><div class="gimg"><img src="assets/cat/zoom.jpeg" alt="Zoom background examples" onerror="this.replaceWith(document.createTextNode('🎥'))"></div><div class="gbody"><h4>Zoom backgrounds</h4><p>Look sharp on every video call</p></div></div>
-      <div class="gcard"><div class="gimg"><img src="assets/cat/social.jpeg" alt="Instagram content examples" onerror="this.replaceWith(document.createTextNode('📱'))"></div><div class="gbody"><h4>Instagram story and feed</h4><p>Cohesive post and story sets</p></div></div>
-      <div class="gcard"><div class="gimg"><img src="assets/cat/lifestyle.jpeg" alt="Lifestyle photo examples" onerror="this.replaceWith(document.createTextNode('✨'))"></div><div class="gbody"><h4>Fun and lifestyle</h4><p>Candid "you doing things" shots</p></div></div>
-      <div class="gcard"><div class="gimg"><img src="assets/cat/ads.jpeg" alt="Ad creative examples" onerror="this.replaceWith(document.createTextNode('📣'))"></div><div class="gbody"><h4>Ad creatives</h4><p>Simple headshot ads that convert</p></div></div>
-      <div class="gcard"><div class="gimg"><img src="assets/cat/thumbnails.jpeg" alt="YouTube thumbnail examples" onerror="this.replaceWith(document.createTextNode('🎬'))"></div><div class="gbody"><h4>YouTube thumbnails</h4><p>Scroll stopping, with you in them</p></div></div>
+      <div class="gcard"><div class="gimg"><img src="assets/cat/profile.jpeg" width="820" height="612" loading="lazy" decoding="async" alt="Profile photo examples" onerror="this.replaceWith(document.createTextNode('🪪'))"></div><div class="gbody"><h4>Profile photos</h4><p>LinkedIn, YouTube, Facebook, X, Instagram, Zoom</p></div></div>
+      <div class="gcard"><div class="gimg"><img src="assets/cat/banners.jpeg" width="820" height="612" loading="lazy" decoding="async" alt="Banner examples" onerror="this.replaceWith(document.createTextNode('🖼️'))"></div><div class="gbody"><h4>Banners and headers</h4><p>Cover images sized for every platform</p></div></div>
+      <div class="gcard"><div class="gimg"><img src="assets/cat/quotes.jpeg" width="820" height="612" loading="lazy" decoding="async" alt="Quote graphic examples" onerror="this.replaceWith(document.createTextNode('💬'))"></div><div class="gbody"><h4>Quote graphics</h4><p>On-brand cards for posts and stories</p></div></div>
+      <div class="gcard"><div class="gimg"><img src="assets/cat/cards.jpeg" width="820" height="612" loading="lazy" decoding="async" alt="Business card examples" onerror="this.replaceWith(document.createTextNode('📇'))"></div><div class="gbody"><h4>Business cards</h4><p>Print ready, matched to your brand</p></div></div>
+      <div class="gcard"><div class="gimg"><img src="assets/cat/zoom.jpeg" width="820" height="612" loading="lazy" decoding="async" alt="Zoom background examples" onerror="this.replaceWith(document.createTextNode('🎥'))"></div><div class="gbody"><h4>Zoom backgrounds</h4><p>Look sharp on every video call</p></div></div>
+      <div class="gcard"><div class="gimg"><img src="assets/cat/social.jpeg" width="820" height="612" loading="lazy" decoding="async" alt="Instagram content examples" onerror="this.replaceWith(document.createTextNode('📱'))"></div><div class="gbody"><h4>Instagram story and feed</h4><p>Cohesive post and story sets</p></div></div>
+      <div class="gcard"><div class="gimg"><img src="assets/cat/lifestyle.jpeg" width="820" height="612" loading="lazy" decoding="async" alt="Lifestyle photo examples" onerror="this.replaceWith(document.createTextNode('✨'))"></div><div class="gbody"><h4>Fun and lifestyle</h4><p>Candid "you doing things" shots</p></div></div>
+      <div class="gcard"><div class="gimg"><img src="assets/cat/ads.jpeg" width="820" height="612" loading="lazy" decoding="async" alt="Ad creative examples" onerror="this.replaceWith(document.createTextNode('📣'))"></div><div class="gbody"><h4>Ad creatives</h4><p>Simple headshot ads that convert</p></div></div>
+      <div class="gcard"><div class="gimg"><img src="assets/cat/thumbnails.jpeg" width="820" height="612" loading="lazy" decoding="async" alt="YouTube thumbnail examples" onerror="this.replaceWith(document.createTextNode('🎬'))"></div><div class="gbody"><h4>YouTube thumbnails</h4><p>Scroll stopping, with you in them</p></div></div>
     </div>
 
     <!-- 7. BONUS BOX -->
@@ -405,7 +462,7 @@ footer{background:#100920;color:#9a8fae;padding:30px 0;text-align:center;font-si
         <h3>Unlimited brand kits</h3>
         <p>Your $47 unlock is for life, with no cap on how many brand kits you build. Make one for yourself, one for your co-founder, and a fresh one for every client you take on.</p>
       </div>
-      <div class="cr-media"><img src="assets/cat/profile.jpeg" alt="Build unlimited brand kits"></div>
+      <div class="cr-media"><img src="assets/cat/profile.jpeg" width="820" height="612" loading="lazy" decoding="async" alt="Build unlimited brand kits"></div>
     </div>
     <div class="crow flip">
       <div class="cr-text">
@@ -413,7 +470,7 @@ footer{background:#100920;color:#9a8fae;padding:30px 0;text-align:center;font-si
         <h3>Runs on the credits you already own</h3>
         <p>The Studio uses the same MediaPlace credits you have been buying for years, so the balance already sitting in your account works here. Generate unlimited assets from credits you already paid for.</p>
       </div>
-      <div class="cr-media"><img src="assets/cat/social.jpeg" alt="Generate assets from your existing credits"></div>
+      <div class="cr-media"><img src="assets/cat/social.jpeg" width="820" height="612" loading="lazy" decoding="async" alt="Generate assets from your existing credits"></div>
     </div>
     <div class="crow">
       <div class="cr-text">
@@ -421,7 +478,7 @@ footer{background:#100920;color:#9a8fae;padding:30px 0;text-align:center;font-si
         <h3>Just paste a link</h3>
         <p>No good photo handy? Drop in your website, LinkedIn or X and the Studio pulls your image, your brand colors and your style automatically. It builds the whole thing around you with almost no effort.</p>
       </div>
-      <div class="cr-media"><img src="assets/cat/lifestyle.jpeg" alt="Paste a link and the Studio builds around you"></div>
+      <div class="cr-media"><img src="assets/cat/lifestyle.jpeg" width="820" height="612" loading="lazy" decoding="async" alt="Paste a link and the Studio builds around you"></div>
     </div>
   </div>
 </section>
@@ -533,7 +590,7 @@ footer{background:#100920;color:#9a8fae;padding:30px 0;text-align:center;font-si
       <div class="bs-ribbon">Unlock your entire personal brand for one payment, no subscription</div>
       <div class="boxshot-grid">
         <div class="boxshot-image">
-          <div class="bs-pic"><img src="assets/cat/social.jpeg" alt="A full personal brand kit generated inside MediaPlace"></div>
+          <div class="bs-pic"><img src="assets/cat/social.jpeg" width="820" height="612" loading="lazy" decoding="async" alt="A full personal brand kit generated inside MediaPlace"></div>
           <ul class="bs-ticks">
             <li>Profile photos</li><li>Banners</li><li>Thumbnails</li>
             <li>Quote graphics</li><li>Business cards</li><li>Zoom backgrounds</li>
@@ -585,6 +642,18 @@ document.querySelectorAll('.faq-q').forEach(function(b){
   }
   tick();setInterval(tick,1000);
 })();
+
+// scroll reveal
+(function(){
+  if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var sel='.head,.gcard,.pain,.bonus,.crow,.guar-card,.vstack,.boxshot-card,.credit-stats,.whatif,.faq-item';
+  var els=[].slice.call(document.querySelectorAll(sel));
+  els.forEach(function(e){e.classList.add('reveal')});
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:0.06,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+
 </script>
 </body>
 </html>
