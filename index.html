@@ -192,12 +192,14 @@ section{padding:74px 0}
 .credits{background:var(--grad);color:#fff;text-align:center}
 .credits .eyebrow{color:rgba(255,255,255,.9)}
 .credits h2{color:#fff}
-.credits p{color:rgba(255,255,255,.95);max-width:660px;margin:0 auto;font-size:1.1rem}
-.credit-stats{display:flex;justify-content:center;flex-wrap:wrap;gap:18px;margin-top:38px}
-.credit-stats .cs{background:#15101f;border:1px solid rgba(255,255,255,.12);border-radius:var(--radius-lg);padding:26px 34px;min-width:200px;box-shadow:0 16px 38px rgba(0,0,0,.28)}
-.credit-stats .cs b{display:block;font-family:'Lexend';font-weight:900;font-size:clamp(2.4rem,5vw,3.2rem);line-height:1;color:#fff}
-.credit-stats .cs span{display:block;margin-top:8px;font-size:.94rem;color:rgba(255,255,255,.92);font-weight:600}
-@media(max-width:640px){.credit-stats .cs{min-width:0;flex:1 1 100%}}
+.credits p{color:rgba(255,255,255,.95);max-width:600px;margin:0 auto;font-size:1.04rem}
+.credit-row{display:flex;align-items:center;justify-content:center;gap:46px;max-width:860px;margin:34px auto 0;text-align:left}
+.credit-frame{flex:0 0 auto;background:#fff;border-radius:var(--radius-lg);padding:22px;box-shadow:0 22px 50px rgba(0,0,0,.30)}
+.credit-frame img{display:block;width:206px;max-width:100%;height:auto}
+.credit-ticks{flex:1 1 330px;min-width:0;list-style:none;display:grid;gap:15px;margin:0;padding:0}
+.credit-ticks li{display:flex;gap:13px;align-items:flex-start;font-size:1.06rem;font-weight:600;color:#fff;line-height:1.42}
+.credit-ticks li::before{content:'✓';flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:#fff;color:var(--brand-deep);font-weight:900;font-size:.86rem;display:flex;align-items:center;justify-content:center;margin-top:1px}
+@media(max-width:720px){.credit-row{flex-direction:column;gap:24px;text-align:left}.credit-frame img{width:178px}.credit-ticks{flex:1 1 auto;width:100%}}
 .credit-voucher{position:relative;display:inline-block;margin:34px auto 4px;background:#15101f;border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:26px 52px;box-shadow:0 18px 44px rgba(0,0,0,.4);overflow:hidden;text-align:center}
 .credit-voucher .cv-label{font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:#cbb9dd;font-weight:700}
 .credit-voucher .cv-amt{font-family:'Lexend';font-weight:900;font-size:clamp(2.4rem,6vw,3.4rem);color:#fff;line-height:1;margin-top:8px}
@@ -299,7 +301,7 @@ footer{background:#100920;color:#9a8fae;padding:30px 0;text-align:center;font-si
   .bs-price-num{font-size:3.2rem}
   .bs-ticks{grid-template-columns:repeat(2,1fr);gap:5px 10px}
   .bs-ticks li{font-size:.78rem}
-  .credit-stats .cs b{font-size:2.4rem}
+  .credit-ticks li{font-size:.98rem}
   .vstack-head{font-size:.68rem;letter-spacing:.08em}
   .vrow .name{font-size:.92rem}
   .vrow .name span{font-size:.78rem}
@@ -450,12 +452,15 @@ footer{background:#100920;color:#9a8fae;padding:30px 0;text-align:center;font-si
   <div class="container">
     <span class="eyebrow">It pays for itself</span>
     <h2>You also get $47 of AI credits, on us</h2>
-    <p>Unlock the Studio for $47 and we hand you $47 of AI credits straight back, free. That is enough to generate up to 250 personal branding assets, so your upgrade pays for itself the moment you start creating.</p>
-    <img class="credit-box" src="assets/creditbox.webp" width="300" height="424" loading="lazy" decoding="async" alt="A free $47 box of AI credits, included with your unlock">
-    <div class="credit-stats">
-      <div class="cs"><b>$47</b><span>in free AI credits, included</span></div>
-      <div class="cs"><b>~250</b><span>assets you can generate</span></div>
-      <div class="cs"><b>$0</b><span>extra to get started</span></div>
+    <p>Unlock the Studio for $47 and we hand you $47 of AI credits straight back, free. Your upgrade pays for itself the moment you start creating.</p>
+    <div class="credit-row">
+      <div class="credit-frame"><img src="assets/creditbox.webp" width="206" height="292" loading="lazy" decoding="async" alt="A free $47 box of AI credits, included with your unlock"></div>
+      <ul class="credit-ticks">
+        <li>$47 of AI credits, included free with your unlock</li>
+        <li>Enough to generate up to 250 personal branding assets</li>
+        <li>Spend them across every brand kit you build</li>
+        <li>$0 extra to get started, your upgrade pays for itself</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -515,12 +520,15 @@ footer{background:#100920;color:#9a8fae;padding:30px 0;text-align:center;font-si
   <div class="container">
     <span class="eyebrow">It pays for itself</span>
     <h2>You also get $47 of AI credits, on us</h2>
-    <p>Unlock the Studio for $47 and we hand you $47 of AI credits straight back, free. That is enough to generate up to 250 personal branding assets, so your upgrade pays for itself the moment you start creating.</p>
-    <img class="credit-box" src="assets/creditbox.webp" width="300" height="424" loading="lazy" decoding="async" alt="A free $47 box of AI credits, included with your unlock">
-    <div class="credit-stats">
-      <div class="cs"><b>$47</b><span>in free AI credits, included</span></div>
-      <div class="cs"><b>~250</b><span>assets you can generate</span></div>
-      <div class="cs"><b>$0</b><span>extra to get started</span></div>
+    <p>Unlock the Studio for $47 and we hand you $47 of AI credits straight back, free. Your upgrade pays for itself the moment you start creating.</p>
+    <div class="credit-row">
+      <div class="credit-frame"><img src="assets/creditbox.webp" width="206" height="292" loading="lazy" decoding="async" alt="A free $47 box of AI credits, included with your unlock"></div>
+      <ul class="credit-ticks">
+        <li>$47 of AI credits, included free with your unlock</li>
+        <li>Enough to generate up to 250 personal branding assets</li>
+        <li>Spend them across every brand kit you build</li>
+        <li>$0 extra to get started, your upgrade pays for itself</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -674,7 +682,7 @@ document.querySelectorAll('.faq-q').forEach(function(b){
 // scroll reveal
 (function(){
   if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
-  var sel='.head,.gcard,.pain,.bonus,.crow,.guar-card,.vstack,.boxshot-card,.credit-stats,.whatif,.faq-item';
+  var sel='.head,.gcard,.pain,.bonus,.crow,.guar-card,.vstack,.boxshot-card,.credit-row,.whatif,.faq-item';
   var els=[].slice.call(document.querySelectorAll(sel));
   els.forEach(function(e){e.classList.add('reveal')});
   if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
