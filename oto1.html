@@ -143,11 +143,10 @@ section{padding:84px 0}
 .fv-head{max-width:780px;margin:0 auto 36px;text-align:center}
 .fv-head h2{margin-bottom:12px}
 .fv-head .fv-sub{font-size:1.08rem;color:var(--text-body)}
-.crow.fv-row{grid-template-areas:"head media" "body media";align-items:center}
-.crow.fv-row .cr-head{grid-area:head;margin-bottom:6px}
+.crow.fv-row{align-items:center}
+.crow.fv-row .fv-left{display:flex;flex-direction:column}
+.crow.fv-row .cr-head{margin-bottom:6px}
 .crow.fv-row .cr-head h3{margin:6px 0 0}
-.crow.fv-row .cr-body{grid-area:body}
-.crow.fv-row .cr-media{grid-area:media}
 
 /* long-form future-pace (skimmable) */
 .longform .lf{max-width:720px;margin:0 auto;text-align:center}
@@ -216,7 +215,7 @@ footer{background:#1001,000;color:#9a8fae;padding:30px 0;text-align:center;font-
   .boxshot-grid{grid-template-columns:1fr;gap:26px}
   .ggrid{grid-template-columns:repeat(2,1fr)}
   .crow{grid-template-columns:1fr;gap:24px}.crow .cr-media,.crow.flip .cr-media{order:-1}.crow .cr-text,.crow.flip .cr-text{order:2}
-  .crow.fv-row{grid-template-columns:1fr;grid-template-areas:"head" "media" "body"}.crow.fv-row .cr-head{text-align:center}
+  .crow.fv-row .fv-left{display:contents}.crow.fv-row .cr-head{order:1;text-align:center}.crow.fv-row .cr-media{order:2}.crow.fv-row .cr-body{order:3}
 }
 @media(max-width:600px){
   section{padding:46px 0}.container{padding:0 16px}
@@ -494,12 +493,12 @@ footer{background:#1001,000;color:#9a8fae;padding:30px 0;text-align:center;font-
     <p class="fv-sub">Every asset the Studio makes is yours to keep and sell. People pay real money on Fiverr for exactly what you create here in one click.</p>
   </div>
   <div class="crow fv-row reveal">
-    <div class="cr-head">
-      <div class="cr-eyebrow">Make your money back</div>
-      <h3>Sell ONE asset and the $67 is already paid for</h3>
-    </div>
-    <div class="cr-media"><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/oto-fiverr.webp" loading="lazy" decoding="async" alt="Real Fiverr gigs selling the same assets MediaPlace makes"></div>
-    <div class="cr-body cr-text">
+    <div class="fv-left">
+      <div class="cr-head">
+        <div class="cr-eyebrow">Make your money back</div>
+        <h3>Sell ONE asset and the $67 is already paid for</h3>
+      </div>
+      <div class="cr-body cr-text">
       <p>So you can sell every asset to clients as a paid service. People charge real money on Fiverr for exactly what the Studio makes in one click:</p>
       <ul class="cr-list">
         <li><span class="tk">✓</span> Sell YouTube thumbnails, people charge around $55</li>
@@ -514,7 +513,9 @@ footer{background:#1001,000;color:#9a8fae;padding:30px 0;text-align:center;font-
         <div class="charge-note">One click adds it to your order and charges your saved card.</div>
         <a href="downsell.html" class="decline">No thanks, I will pass on the bundle</a>
       </div>
+      </div>
     </div>
+    <div class="cr-media"><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/oto-fiverr.webp" loading="lazy" decoding="async" alt="Real Fiverr gigs selling the same assets MediaPlace makes"></div>
   </div>
 </div></section>
 
@@ -579,7 +580,7 @@ footer{background:#1001,000;color:#9a8fae;padding:30px 0;text-align:center;font-
     <div class="faq-item"><button class="faq-q" aria-expanded="false">Can I use these for clients or sell what I make?<span class="pm">+</span></button><div class="faq-a"><div>Yes. Use them for your own brand and for client work. Plenty of members make their $67 back from a single client project.</div></div></div>
     <div class="faq-item"><button class="faq-q" aria-expanded="false">Is this a separate login or product?<span class="pm">+</span></button><div class="faq-a"><div>No. Everything unlocks right inside the MediaPlace Studio you are already setting up. Nothing new to install.</div></div></div>
     <div class="faq-item"><button class="faq-q" aria-expanded="false">What happens if I leave this page?<span class="pm">+</span></button><div class="faq-a"><div>This one-time bundle price is only available here, right now. If you leave, it is gone and the templates go back to being sold separately.</div></div></div>
-    <div class="faq-item"><button class="faq-q" aria-expanded="false">What if it is not for me?<span class="pm">+</span></button><div class="faq-a"><div>You are covered by a 30 day money-back guarantee. Email us within 30 days for a full refund and keep anything you have already created.</div></div></div>
+    <div class="faq-item"><button class="faq-q" aria-expanded="false">What if it is not for me?<span class="pm">+</span></button><div class="faq-a"><div>You are covered by our 30-day money-back guarantee. Email within 30 days for a full refund. No questions asked.</div></div></div>
   </div>
 </div></section>
 
