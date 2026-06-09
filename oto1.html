@@ -140,6 +140,14 @@ section{padding:84px 0}
 .cr-list{list-style:none;margin-top:16px;display:flex;flex-direction:column;gap:9px}
 .cr-list li{display:flex;gap:10px;font-size:.96rem;color:var(--text-body)}.cr-list .tk{color:var(--success);font-weight:800;flex-shrink:0}
 .cr-media img{border-radius:var(--radius-lg);box-shadow:0 18px 44px rgba(191,15,201,.16);border:1px solid var(--border);width:100%}
+.fv-head{max-width:780px;margin:0 auto 36px;text-align:center}
+.fv-head h2{margin-bottom:12px}
+.fv-head .fv-sub{font-size:1.08rem;color:var(--text-body)}
+.crow.fv-row{grid-template-areas:"head media" "body media";align-items:center}
+.crow.fv-row .cr-head{grid-area:head;margin-bottom:6px}
+.crow.fv-row .cr-head h3{margin:6px 0 0}
+.crow.fv-row .cr-body{grid-area:body}
+.crow.fv-row .cr-media{grid-area:media}
 
 /* long-form future-pace (skimmable) */
 .longform .lf{max-width:720px;margin:0 auto;text-align:center}
@@ -208,6 +216,7 @@ footer{background:#1001,000;color:#9a8fae;padding:30px 0;text-align:center;font-
   .boxshot-grid{grid-template-columns:1fr;gap:26px}
   .ggrid{grid-template-columns:repeat(2,1fr)}
   .crow{grid-template-columns:1fr;gap:24px}.crow .cr-media,.crow.flip .cr-media{order:-1}.crow .cr-text,.crow.flip .cr-text{order:2}
+  .crow.fv-row{grid-template-columns:1fr;grid-template-areas:"head" "media" "body"}.crow.fv-row .cr-head{text-align:center}
 }
 @media(max-width:600px){
   section{padding:46px 0}.container{padding:0 16px}
@@ -236,7 +245,7 @@ footer{background:#1001,000;color:#9a8fae;padding:30px 0;text-align:center;font-
 <!-- 2. TOPBAR -->
 <header class="topbar"><div class="topbar-in">
   <span class="lg"><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/mediaplace-logo.svg" alt="MediaPlace"></span>
-  <div class="tb-mid"><span class="step-pill">Step 2 of 3</span><span class="cd">Expires in <strong id="cd">10:00</strong></span><a href="#" class="tb-cta">Add for $67</a></div>
+  <div class="tb-mid"><span class="step-pill">Step 2 of 3</span><span class="cd">Expires in <strong id="cd">20:00</strong></span><a href="#" class="tb-cta">Add for $67</a></div>
 </div></header>
 
 <!-- 3. HERO -->
@@ -480,11 +489,18 @@ footer{background:#1001,000;color:#9a8fae;padding:30px 0;text-align:center;font-
 
 <!-- 9. LONG-FORM FUTURE-PACE (skimmable) -->
 <section class="longform"><div class="container">
-  <div class="crow reveal">
-    <div class="cr-text">
+  <div class="fv-head reveal">
+    <h2>You get full commercial-use rights</h2>
+    <p class="fv-sub">Every asset the Studio makes is yours to keep and sell. People pay real money on Fiverr for exactly what you create here in one click.</p>
+  </div>
+  <div class="crow fv-row reveal">
+    <div class="cr-head">
       <div class="cr-eyebrow">Make your money back</div>
       <h3>Sell ONE asset and the $67 is already paid for</h3>
-      <p>You get full commercial-use rights, so you can sell every asset to clients as a paid service. People charge real money on Fiverr for exactly what the Studio makes in one click:</p>
+    </div>
+    <div class="cr-media"><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/oto-fiverr.webp" loading="lazy" decoding="async" alt="Real Fiverr gigs selling the same assets MediaPlace makes"></div>
+    <div class="cr-body cr-text">
+      <p>So you can sell every asset to clients as a paid service. People charge real money on Fiverr for exactly what the Studio makes in one click:</p>
       <ul class="cr-list">
         <li><span class="tk">✓</span> Sell YouTube thumbnails, people charge around $55</li>
         <li><span class="tk">✓</span> Sell LinkedIn banners, around $45</li>
@@ -499,7 +515,6 @@ footer{background:#1001,000;color:#9a8fae;padding:30px 0;text-align:center;font-
         <a href="downsell.html" class="decline">No thanks, I will pass on the bundle</a>
       </div>
     </div>
-    <div class="cr-media"><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/oto-fiverr.webp" loading="lazy" decoding="async" alt="Real Fiverr gigs selling the same assets MediaPlace makes"></div>
   </div>
 </div></section>
 
@@ -603,7 +618,7 @@ footer{background:#1001,000;color:#9a8fae;padding:30px 0;text-align:center;font-
 <script>
 document.getElementById('yr').textContent=new Date().getFullYear();
 document.querySelectorAll('.faq-q').forEach(function(b){b.addEventListener('click',function(){var o=b.getAttribute('aria-expanded')==='true';var a=b.nextElementSibling;b.setAttribute('aria-expanded',!o);a.style.maxHeight=o?null:a.scrollHeight+'px'})});
-(function(){var KEY='mp_oto1_end';var end=localStorage.getItem(KEY);if(!end){end=Date.now()+30*60*1000;localStorage.setItem(KEY,end)}end=parseInt(end,10);var el=document.getElementById('cd');function t(){var s=Math.floor((end-Date.now())/1000);if(s<=0){var cd=el&&el.closest('.cd');if(cd)cd.style.display='none';return}var m=String(Math.floor(s/60)).padStart(2,'0');var ss=String(s%60).padStart(2,'0');if(el)el.textContent=m+':'+ss}t();setInterval(t,1000)})();
+(function(){var KEY='mp_oto1_end';var end=localStorage.getItem(KEY);if(!end){end=Date.now()+20*60*1000;localStorage.setItem(KEY,end)}end=parseInt(end,10);var el=document.getElementById('cd');function t(){var s=Math.floor((end-Date.now())/1000);if(s<=0){var cd=el&&el.closest('.cd');if(cd)cd.style.display='none';return}var m=String(Math.floor(s/60)).padStart(2,'0');var ss=String(s%60).padStart(2,'0');if(el)el.textContent=m+':'+ss}t();setInterval(t,1000)})();
 (function(){if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;var els=[].slice.call(document.querySelectorAll('.reveal'));if(!('IntersectionObserver'in window)){els.forEach(function(e){e.classList.add('in')});return}var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:0.08,rootMargin:'0px 0px -40px 0px'});els.forEach(function(e){io.observe(e)})})();
 </script>
 </body>
