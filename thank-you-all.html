@@ -87,35 +87,22 @@ footer{text-align:center;padding:26px 20px;font-size:.82rem;color:#9a8fae}
 <body>
 <header class="topbar"><div class="topbar-in">
   <img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/mediaplace-logo.svg" alt="MediaPlace">
-  <span class="cd" id="cdwrap">This page closes in <strong id="cd">15:00</strong></span>
 </div></header>
 
 <section class="hero"><div class="container">
   <div class="check"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#bf0fc9"/><stop offset="1" stop-color="#eb1b9f"/></linearGradient></defs><circle cx="50" cy="50" r="46" fill="url(#g)"/><path d="M30 51 L44 65 L72 36" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
   <h1>Thank you for your order &#127881;</h1>
-  <p class="sub">Your order is confirmed. Everything's been added to your MediaPlace automatically.</p>
-</div></section>
-
-<section><div class="container">
-  <div class="sec-head">
-    <h2 class="sec-h2">Here's your order</h2>
-    <p>And anything you skipped, you can add it below in one click.</p>
-  </div>
-  <div class="lc-list">
-    <article class="lc-card owned reveal"><div class="lc-img"><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/hero-showcase.webp" loading="lazy" decoding="async" alt="AI Personal Brand Studio"></div><div class="lc-body"><h3>AI Personal Brand Studio</h3><p>Your Studio is unlocked with 100 starter templates and your AI credits, lifetime access.</p></div><div class="lc-act"><span class="lc-have">Already added to order</span></div></article><article class="lc-card reveal"><div class="lc-img"><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/oto-bundle-collage.webp" loading="lazy" decoding="async" alt="The 1,000 Bundle + 1,500 AI Credits"></div><div class="lc-body"><h3>The 1,000 Bundle + 1,500 AI Credits</h3><p>1,000+ templates and presets across 9 categories, plus 1,500 AI credits, yours to keep for life.</p></div><div class="lc-act"><div class="lc-price"><span class="lc-anchor">$628 value</span><span class="lc-num">$67</span><span class="lc-meta">one time</span></div><a href="#" class="lc-buy">Add to my order &rarr;</a></div></article><article class="lc-card reveal"><div class="lc-img"><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/creditbox10k.webp" loading="lazy" decoding="async" alt="10,000 AI Credits"></div><div class="lc-body"><h3>10,000 AI Credits <span class="lc-note">(50% off)</span></h3><p>These credits never expire. Enough for around 3,300 branded assets across the entire app.</p></div><div class="lc-act"><div class="lc-price"><span class="lc-anchor">$399 in-app</span><span class="lc-num">$197</span><span class="lc-meta">one time</span></div><a href="#" class="lc-buy">Add to my order &rarr;</a></div></article>
-  </div>
-  <div class="lc-charge">One click adds it to your order and charges your saved card.</div>
+  <p class="sub">You picked up the full set. Your Studio, templates and AI credits are all in your account.</p>
 </div></section>
 
 <section class="closeband"><div class="container">
-  <div class="cb"><b>That is everything.</b><p>Close and restart MediaPlace, and your order will be waiting in your account.</p></div>
+  <div class="cb"><b>That is everything.</b><p>Close and restart MediaPlace, and your full order will be waiting in your account.</p></div>
 </div></section>
 
 <footer>The AI Personal Brand Studio, a new tab inside MediaPlace. &copy; <span id="yr"></span> MediaPlace.</footer>
 
 <script>
 document.getElementById('yr').textContent=new Date().getFullYear();
-(function(){var KEY='mp_ty_end';var end=localStorage.getItem(KEY);if(!end){end=Date.now()+15*60*1000;localStorage.setItem(KEY,end)}end=parseInt(end,10);var el=document.getElementById('cd');function t(){var s=Math.floor((end-Date.now())/1000);if(s<=0){var cw=document.getElementById('cdwrap');if(cw)cw.style.display='none';return}var m=String(Math.floor(s/60)).padStart(2,'0');var ss=String(s%60).padStart(2,'0');if(el)el.textContent=m+':'+ss}t();setInterval(t,1000)})();
 (function(){if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;var els=[].slice.call(document.querySelectorAll('.reveal'));if(!('IntersectionObserver'in window)){els.forEach(function(e){e.classList.add('in')});return}var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:0.08,rootMargin:'0px 0px -30px 0px'});els.forEach(function(e){io.observe(e)})})();
 </script>
 </body>
