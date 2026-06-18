@@ -361,6 +361,11 @@ footer{background:#100920;color:#9a8fae;padding:30px 0;text-align:center;font-si
 .es-step figcaption span{display:block;font-weight:500;font-size:.86rem;color:var(--text-mute);margin-top:2px}
 .es-arrow{font-size:1.8rem;font-weight:900;color:var(--brand);line-height:1;align-self:center;transform:translateY(-28px)}
 @media(max-width:760px){.edit-strip{grid-template-columns:1fr;gap:10px}.es-arrow{transform:rotate(90deg);margin:2px auto}}
+.es-img{position:relative;aspect-ratio:1/1;border-radius:14px;overflow:hidden;border:1px solid var(--brand-light);box-shadow:0 14px 32px rgba(203,26,235,.16)}
+.es-img img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+.es-prompt{position:absolute;left:10px;right:10px;bottom:10px;display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.96);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);border-radius:12px;padding:9px 10px;box-shadow:0 8px 20px rgba(0,0,0,.20)}
+.es-prompt-txt{flex:1;font-size:.72rem;line-height:1.32;font-weight:600;color:var(--text);text-align:left}
+.es-prompt-go{flex:0 0 auto;background:var(--grad);color:#fff;font-weight:800;font-size:.66rem;padding:6px 11px;border-radius:8px;text-transform:uppercase;letter-spacing:.04em}
 
 /* Before / after editing slider (mirrors commercial-rights media side) */
 .ba-tabs{display:flex;flex-wrap:nowrap;justify-content:center;gap:7px;margin-bottom:14px}
@@ -456,17 +461,23 @@ footer{background:#100920;color:#9a8fae;padding:30px 0;text-align:center;font-si
       </div>
       <div class="edit-strip">
         <figure class="es-step">
-          <div class="cr-ph">[ EDITING SCREENSHOT / GIF<br>edit-step1.webp ]</div>
+          <div class="es-img"><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/edit-step1.webp" alt="A headshot turned into a branded scrapbook graphic in MediaPlace" loading="lazy"></div>
           <figcaption>1. Generate your asset<span>One click, straight from your photo</span></figcaption>
         </figure>
         <div class="es-arrow" aria-hidden="true">&rarr;</div>
         <figure class="es-step">
-          <div class="cr-ph">[ EDITING SCREENSHOT / GIF<br>edit-step2.webp ]</div>
-          <figcaption>2. Ask for a change<span>Swap the text, colors or layout</span></figcaption>
+          <div class="es-img">
+            <img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/edit-step2.webp" alt="Typing a plain-English edit request into MediaPlace" loading="lazy">
+            <div class="es-prompt">
+              <span class="es-prompt-txt">Change the man from wearing a suit to wearing a Hawaiian button shirt. Make the headline say "Join the webinar below." Make the call to action in the bottom right corner say "Join now."</span>
+              <span class="es-prompt-go">Edit</span>
+            </div>
+          </div>
+          <figcaption>2. Ask for a change<span>Type it in plain English</span></figcaption>
         </figure>
         <div class="es-arrow" aria-hidden="true">&rarr;</div>
         <figure class="es-step">
-          <div class="cr-ph">[ EDITING SCREENSHOT / GIF<br>edit-step3.webp ]</div>
+          <div class="es-img"><img src="https://launch-partner.github.io/mediaplace-pbs-preview/assets/edit-step3.webp" alt="The finished Hawaiian-shirt webinar graphic after one plain-English edit" loading="lazy"></div>
           <figcaption>3. Done, exactly right<span>Export it in 4K and post</span></figcaption>
         </figure>
       </div>
